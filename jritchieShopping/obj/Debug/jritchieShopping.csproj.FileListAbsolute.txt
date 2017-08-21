@@ -1,0 +1,194 @@
+C:\Users\J\Documents\Visual Studio 2017\Projects\jritchieShopping\jritchieShopping\bin\ApplicationInsights.config
+C:\Users\J\Documents\Visual Studio 2017\Projects\jritchieShopping\jritchieShopping\bin\roslyn\csc.exe
+C:\Users\J\Documents\Visual Studio 2017\Projects\jritchieShopping\jritchieShopping\bin\roslyn\csc.exe.config
+C:\Users\J\Documents\Visual Studio 2017\Projects\jritchieShopping\jritchieShopping\bin\roslyn\csc.rsp
+C:\Users\J\Documents\Visual Studio 2017\Projects\jritchieShopping\jritchieShopping\bin\roslyn\csi.exe
+C:\Users\J\Documents\Visual Studio 2017\Projects\jritchieShopping\jritchieShopping\bin\roslyn\csi.rsp
+C:\Users\J\Documents\Visual Studio 2017\Projects\jritchieShopping\jritchieShopping\bin\roslyn\Microsoft.Build.Tasks.CodeAnalysis.dll
+C:\Users\J\Documents\Visual Studio 2017\Projects\jritchieShopping\jritchieShopping\bin\roslyn\Microsoft.CodeAnalysis.CSharp.dll
+C:\Users\J\Documents\Visual Studio 2017\Projects\jritchieShopping\jritchieShopping\bin\roslyn\Microsoft.CodeAnalysis.CSharp.Scripting.dll
+C:\Users\J\Documents\Visual Studio 2017\Projects\jritchieShopping\jritchieShopping\bin\roslyn\Microsoft.CodeAnalysis.dll
+C:\Users\J\Documents\Visual Studio 2017\Projects\jritchieShopping\jritchieShopping\bin\roslyn\Microsoft.CodeAnalysis.Scripting.dll
+C:\Users\J\Documents\Visual Studio 2017\Projects\jritchieShopping\jritchieShopping\bin\roslyn\Microsoft.CodeAnalysis.VisualBasic.dll
+C:\Users\J\Documents\Visual Studio 2017\Projects\jritchieShopping\jritchieShopping\bin\roslyn\Microsoft.CSharp.Core.targets
+C:\Users\J\Documents\Visual Studio 2017\Projects\jritchieShopping\jritchieShopping\bin\roslyn\Microsoft.DiaSymReader.Native.amd64.dll
+C:\Users\J\Documents\Visual Studio 2017\Projects\jritchieShopping\jritchieShopping\bin\roslyn\Microsoft.DiaSymReader.Native.x86.dll
+C:\Users\J\Documents\Visual Studio 2017\Projects\jritchieShopping\jritchieShopping\bin\roslyn\Microsoft.VisualBasic.Core.targets
+C:\Users\J\Documents\Visual Studio 2017\Projects\jritchieShopping\jritchieShopping\bin\roslyn\System.AppContext.dll
+C:\Users\J\Documents\Visual Studio 2017\Projects\jritchieShopping\jritchieShopping\bin\roslyn\System.Collections.Immutable.dll
+C:\Users\J\Documents\Visual Studio 2017\Projects\jritchieShopping\jritchieShopping\bin\roslyn\System.Diagnostics.StackTrace.dll
+C:\Users\J\Documents\Visual Studio 2017\Projects\jritchieShopping\jritchieShopping\bin\roslyn\System.IO.FileSystem.dll
+C:\Users\J\Documents\Visual Studio 2017\Projects\jritchieShopping\jritchieShopping\bin\roslyn\System.IO.FileSystem.Primitives.dll
+C:\Users\J\Documents\Visual Studio 2017\Projects\jritchieShopping\jritchieShopping\bin\roslyn\System.Reflection.Metadata.dll
+C:\Users\J\Documents\Visual Studio 2017\Projects\jritchieShopping\jritchieShopping\bin\roslyn\vbc.exe
+C:\Users\J\Documents\Visual Studio 2017\Projects\jritchieShopping\jritchieShopping\bin\roslyn\vbc.exe.config
+C:\Users\J\Documents\Visual Studio 2017\Projects\jritchieShopping\jritchieShopping\bin\roslyn\vbc.rsp
+C:\Users\J\Documents\Visual Studio 2017\Projects\jritchieShopping\jritchieShopping\bin\roslyn\VBCSCompiler.exe
+C:\Users\J\Documents\Visual Studio 2017\Projects\jritchieShopping\jritchieShopping\bin\roslyn\VBCSCompiler.exe.config
+C:\Users\J\Documents\Visual Studio 2017\Projects\jritchieShopping\jritchieShopping\bin\jritchieShopping.dll.config
+C:\Users\J\Documents\Visual Studio 2017\Projects\jritchieShopping\jritchieShopping\bin\jritchieShopping.dll
+C:\Users\J\Documents\Visual Studio 2017\Projects\jritchieShopping\jritchieShopping\bin\jritchieShopping.pdb
+C:\Users\J\Documents\Visual Studio 2017\Projects\jritchieShopping\jritchieShopping\bin\Antlr3.Runtime.dll
+C:\Users\J\Documents\Visual Studio 2017\Projects\jritchieShopping\jritchieShopping\bin\EntityFramework.dll
+C:\Users\J\Documents\Visual Studio 2017\Projects\jritchieShopping\jritchieShopping\bin\EntityFramework.SqlServer.dll
+C:\Users\J\Documents\Visual Studio 2017\Projects\jritchieShopping\jritchieShopping\bin\Microsoft.AI.Agent.Intercept.dll
+C:\Users\J\Documents\Visual Studio 2017\Projects\jritchieShopping\jritchieShopping\bin\Microsoft.AI.DependencyCollector.dll
+C:\Users\J\Documents\Visual Studio 2017\Projects\jritchieShopping\jritchieShopping\bin\Microsoft.AI.PerfCounterCollector.dll
+C:\Users\J\Documents\Visual Studio 2017\Projects\jritchieShopping\jritchieShopping\bin\Microsoft.AI.ServerTelemetryChannel.dll
+C:\Users\J\Documents\Visual Studio 2017\Projects\jritchieShopping\jritchieShopping\bin\Microsoft.AI.Web.dll
+C:\Users\J\Documents\Visual Studio 2017\Projects\jritchieShopping\jritchieShopping\bin\Microsoft.AI.WindowsServer.dll
+C:\Users\J\Documents\Visual Studio 2017\Projects\jritchieShopping\jritchieShopping\bin\Microsoft.ApplicationInsights.dll
+C:\Users\J\Documents\Visual Studio 2017\Projects\jritchieShopping\jritchieShopping\bin\Microsoft.AspNet.Identity.Core.dll
+C:\Users\J\Documents\Visual Studio 2017\Projects\jritchieShopping\jritchieShopping\bin\Microsoft.AspNet.Identity.EntityFramework.dll
+C:\Users\J\Documents\Visual Studio 2017\Projects\jritchieShopping\jritchieShopping\bin\Microsoft.AspNet.Identity.Owin.dll
+C:\Users\J\Documents\Visual Studio 2017\Projects\jritchieShopping\jritchieShopping\bin\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.dll
+C:\Users\J\Documents\Visual Studio 2017\Projects\jritchieShopping\jritchieShopping\bin\Microsoft.Owin.dll
+C:\Users\J\Documents\Visual Studio 2017\Projects\jritchieShopping\jritchieShopping\bin\Microsoft.Owin.Host.SystemWeb.dll
+C:\Users\J\Documents\Visual Studio 2017\Projects\jritchieShopping\jritchieShopping\bin\Microsoft.Owin.Security.Cookies.dll
+C:\Users\J\Documents\Visual Studio 2017\Projects\jritchieShopping\jritchieShopping\bin\Microsoft.Owin.Security.dll
+C:\Users\J\Documents\Visual Studio 2017\Projects\jritchieShopping\jritchieShopping\bin\Microsoft.Owin.Security.Facebook.dll
+C:\Users\J\Documents\Visual Studio 2017\Projects\jritchieShopping\jritchieShopping\bin\Microsoft.Owin.Security.Google.dll
+C:\Users\J\Documents\Visual Studio 2017\Projects\jritchieShopping\jritchieShopping\bin\Microsoft.Owin.Security.MicrosoftAccount.dll
+C:\Users\J\Documents\Visual Studio 2017\Projects\jritchieShopping\jritchieShopping\bin\Microsoft.Owin.Security.OAuth.dll
+C:\Users\J\Documents\Visual Studio 2017\Projects\jritchieShopping\jritchieShopping\bin\Microsoft.Owin.Security.Twitter.dll
+C:\Users\J\Documents\Visual Studio 2017\Projects\jritchieShopping\jritchieShopping\bin\Microsoft.Web.Infrastructure.dll
+C:\Users\J\Documents\Visual Studio 2017\Projects\jritchieShopping\jritchieShopping\bin\Newtonsoft.Json.dll
+C:\Users\J\Documents\Visual Studio 2017\Projects\jritchieShopping\jritchieShopping\bin\Owin.dll
+C:\Users\J\Documents\Visual Studio 2017\Projects\jritchieShopping\jritchieShopping\bin\System.Web.Helpers.dll
+C:\Users\J\Documents\Visual Studio 2017\Projects\jritchieShopping\jritchieShopping\bin\System.Web.Mvc.dll
+C:\Users\J\Documents\Visual Studio 2017\Projects\jritchieShopping\jritchieShopping\bin\System.Web.Optimization.dll
+C:\Users\J\Documents\Visual Studio 2017\Projects\jritchieShopping\jritchieShopping\bin\System.Web.Razor.dll
+C:\Users\J\Documents\Visual Studio 2017\Projects\jritchieShopping\jritchieShopping\bin\System.Web.WebPages.Deployment.dll
+C:\Users\J\Documents\Visual Studio 2017\Projects\jritchieShopping\jritchieShopping\bin\System.Web.WebPages.dll
+C:\Users\J\Documents\Visual Studio 2017\Projects\jritchieShopping\jritchieShopping\bin\System.Web.WebPages.Razor.dll
+C:\Users\J\Documents\Visual Studio 2017\Projects\jritchieShopping\jritchieShopping\bin\WebGrease.dll
+C:\Users\J\Documents\Visual Studio 2017\Projects\jritchieShopping\jritchieShopping\bin\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.xml
+C:\Users\J\Documents\Visual Studio 2017\Projects\jritchieShopping\jritchieShopping\bin\System.Web.Helpers.xml
+C:\Users\J\Documents\Visual Studio 2017\Projects\jritchieShopping\jritchieShopping\bin\System.Web.Mvc.xml
+C:\Users\J\Documents\Visual Studio 2017\Projects\jritchieShopping\jritchieShopping\bin\System.Web.Optimization.xml
+C:\Users\J\Documents\Visual Studio 2017\Projects\jritchieShopping\jritchieShopping\bin\System.Web.Razor.xml
+C:\Users\J\Documents\Visual Studio 2017\Projects\jritchieShopping\jritchieShopping\bin\System.Web.WebPages.xml
+C:\Users\J\Documents\Visual Studio 2017\Projects\jritchieShopping\jritchieShopping\bin\System.Web.WebPages.Deployment.xml
+C:\Users\J\Documents\Visual Studio 2017\Projects\jritchieShopping\jritchieShopping\bin\System.Web.WebPages.Razor.xml
+C:\Users\J\Documents\Visual Studio 2017\Projects\jritchieShopping\jritchieShopping\bin\Antlr3.Runtime.pdb
+C:\Users\J\Documents\Visual Studio 2017\Projects\jritchieShopping\jritchieShopping\bin\Newtonsoft.Json.xml
+C:\Users\J\Documents\Visual Studio 2017\Projects\jritchieShopping\jritchieShopping\bin\EntityFramework.xml
+C:\Users\J\Documents\Visual Studio 2017\Projects\jritchieShopping\jritchieShopping\bin\EntityFramework.SqlServer.xml
+C:\Users\J\Documents\Visual Studio 2017\Projects\jritchieShopping\jritchieShopping\bin\Microsoft.AspNet.Identity.Core.xml
+C:\Users\J\Documents\Visual Studio 2017\Projects\jritchieShopping\jritchieShopping\bin\Microsoft.AspNet.Identity.Owin.xml
+C:\Users\J\Documents\Visual Studio 2017\Projects\jritchieShopping\jritchieShopping\bin\Microsoft.AspNet.Identity.EntityFramework.xml
+C:\Users\J\Documents\Visual Studio 2017\Projects\jritchieShopping\jritchieShopping\bin\Microsoft.Owin.xml
+C:\Users\J\Documents\Visual Studio 2017\Projects\jritchieShopping\jritchieShopping\bin\Microsoft.Owin.Host.SystemWeb.xml
+C:\Users\J\Documents\Visual Studio 2017\Projects\jritchieShopping\jritchieShopping\bin\Microsoft.Owin.Security.xml
+C:\Users\J\Documents\Visual Studio 2017\Projects\jritchieShopping\jritchieShopping\bin\Microsoft.Owin.Security.Facebook.xml
+C:\Users\J\Documents\Visual Studio 2017\Projects\jritchieShopping\jritchieShopping\bin\Microsoft.Owin.Security.Cookies.xml
+C:\Users\J\Documents\Visual Studio 2017\Projects\jritchieShopping\jritchieShopping\bin\Microsoft.Owin.Security.OAuth.xml
+C:\Users\J\Documents\Visual Studio 2017\Projects\jritchieShopping\jritchieShopping\bin\Microsoft.Owin.Security.Google.xml
+C:\Users\J\Documents\Visual Studio 2017\Projects\jritchieShopping\jritchieShopping\bin\Microsoft.Owin.Security.Twitter.xml
+C:\Users\J\Documents\Visual Studio 2017\Projects\jritchieShopping\jritchieShopping\bin\Microsoft.Owin.Security.MicrosoftAccount.xml
+C:\Users\J\Documents\Visual Studio 2017\Projects\jritchieShopping\jritchieShopping\bin\Microsoft.ApplicationInsights.xml
+C:\Users\J\Documents\Visual Studio 2017\Projects\jritchieShopping\jritchieShopping\bin\Microsoft.AI.DependencyCollector.xml
+C:\Users\J\Documents\Visual Studio 2017\Projects\jritchieShopping\jritchieShopping\bin\Microsoft.AI.ServerTelemetryChannel.xml
+C:\Users\J\Documents\Visual Studio 2017\Projects\jritchieShopping\jritchieShopping\bin\Microsoft.AI.WindowsServer.xml
+C:\Users\J\Documents\Visual Studio 2017\Projects\jritchieShopping\jritchieShopping\bin\Microsoft.AI.Web.xml
+C:\Users\J\Documents\Visual Studio 2017\Projects\jritchieShopping\jritchieShopping\obj\Debug\jritchieShopping.csprojResolveAssemblyReference.cache
+C:\Users\J\Documents\Visual Studio 2017\Projects\jritchieShopping\jritchieShopping\obj\Debug\jritchieShopping.csproj.CoreCompileInputs.cache
+C:\Users\J\Documents\Visual Studio 2017\Projects\jritchieShopping\jritchieShopping\obj\Debug\jritchieShopping.dll
+C:\Users\J\Documents\Visual Studio 2017\Projects\jritchieShopping\jritchieShopping\obj\Debug\jritchieShopping.pdb
+C:\Users\J\Desktop\New folder\jritchieShopping\jritchieShopping\bin\ApplicationInsights.config
+C:\Users\J\Desktop\New folder\jritchieShopping\jritchieShopping\bin\roslyn\csc.exe
+C:\Users\J\Desktop\New folder\jritchieShopping\jritchieShopping\bin\roslyn\csc.exe.config
+C:\Users\J\Desktop\New folder\jritchieShopping\jritchieShopping\bin\roslyn\csc.rsp
+C:\Users\J\Desktop\New folder\jritchieShopping\jritchieShopping\bin\roslyn\csi.exe
+C:\Users\J\Desktop\New folder\jritchieShopping\jritchieShopping\bin\roslyn\csi.rsp
+C:\Users\J\Desktop\New folder\jritchieShopping\jritchieShopping\bin\roslyn\Microsoft.Build.Tasks.CodeAnalysis.dll
+C:\Users\J\Desktop\New folder\jritchieShopping\jritchieShopping\bin\roslyn\Microsoft.CodeAnalysis.CSharp.dll
+C:\Users\J\Desktop\New folder\jritchieShopping\jritchieShopping\bin\roslyn\Microsoft.CodeAnalysis.CSharp.Scripting.dll
+C:\Users\J\Desktop\New folder\jritchieShopping\jritchieShopping\bin\roslyn\Microsoft.CodeAnalysis.dll
+C:\Users\J\Desktop\New folder\jritchieShopping\jritchieShopping\bin\roslyn\Microsoft.CodeAnalysis.Scripting.dll
+C:\Users\J\Desktop\New folder\jritchieShopping\jritchieShopping\bin\roslyn\Microsoft.CodeAnalysis.VisualBasic.dll
+C:\Users\J\Desktop\New folder\jritchieShopping\jritchieShopping\bin\roslyn\Microsoft.CSharp.Core.targets
+C:\Users\J\Desktop\New folder\jritchieShopping\jritchieShopping\bin\roslyn\Microsoft.DiaSymReader.Native.amd64.dll
+C:\Users\J\Desktop\New folder\jritchieShopping\jritchieShopping\bin\roslyn\Microsoft.DiaSymReader.Native.x86.dll
+C:\Users\J\Desktop\New folder\jritchieShopping\jritchieShopping\bin\roslyn\Microsoft.VisualBasic.Core.targets
+C:\Users\J\Desktop\New folder\jritchieShopping\jritchieShopping\bin\roslyn\System.AppContext.dll
+C:\Users\J\Desktop\New folder\jritchieShopping\jritchieShopping\bin\roslyn\System.Collections.Immutable.dll
+C:\Users\J\Desktop\New folder\jritchieShopping\jritchieShopping\bin\roslyn\System.Diagnostics.StackTrace.dll
+C:\Users\J\Desktop\New folder\jritchieShopping\jritchieShopping\bin\roslyn\System.IO.FileSystem.dll
+C:\Users\J\Desktop\New folder\jritchieShopping\jritchieShopping\bin\roslyn\System.IO.FileSystem.Primitives.dll
+C:\Users\J\Desktop\New folder\jritchieShopping\jritchieShopping\bin\roslyn\System.Reflection.Metadata.dll
+C:\Users\J\Desktop\New folder\jritchieShopping\jritchieShopping\bin\roslyn\vbc.exe
+C:\Users\J\Desktop\New folder\jritchieShopping\jritchieShopping\bin\roslyn\vbc.exe.config
+C:\Users\J\Desktop\New folder\jritchieShopping\jritchieShopping\bin\roslyn\vbc.rsp
+C:\Users\J\Desktop\New folder\jritchieShopping\jritchieShopping\bin\roslyn\VBCSCompiler.exe
+C:\Users\J\Desktop\New folder\jritchieShopping\jritchieShopping\bin\roslyn\VBCSCompiler.exe.config
+C:\Users\J\Desktop\New folder\jritchieShopping\jritchieShopping\bin\jritchieShopping.dll.config
+C:\Users\J\Desktop\New folder\jritchieShopping\jritchieShopping\bin\jritchieShopping.dll
+C:\Users\J\Desktop\New folder\jritchieShopping\jritchieShopping\bin\jritchieShopping.pdb
+C:\Users\J\Desktop\New folder\jritchieShopping\jritchieShopping\bin\Antlr3.Runtime.dll
+C:\Users\J\Desktop\New folder\jritchieShopping\jritchieShopping\bin\EntityFramework.dll
+C:\Users\J\Desktop\New folder\jritchieShopping\jritchieShopping\bin\EntityFramework.SqlServer.dll
+C:\Users\J\Desktop\New folder\jritchieShopping\jritchieShopping\bin\Microsoft.AI.Agent.Intercept.dll
+C:\Users\J\Desktop\New folder\jritchieShopping\jritchieShopping\bin\Microsoft.AI.DependencyCollector.dll
+C:\Users\J\Desktop\New folder\jritchieShopping\jritchieShopping\bin\Microsoft.AI.PerfCounterCollector.dll
+C:\Users\J\Desktop\New folder\jritchieShopping\jritchieShopping\bin\Microsoft.AI.ServerTelemetryChannel.dll
+C:\Users\J\Desktop\New folder\jritchieShopping\jritchieShopping\bin\Microsoft.AI.Web.dll
+C:\Users\J\Desktop\New folder\jritchieShopping\jritchieShopping\bin\Microsoft.AI.WindowsServer.dll
+C:\Users\J\Desktop\New folder\jritchieShopping\jritchieShopping\bin\Microsoft.ApplicationInsights.dll
+C:\Users\J\Desktop\New folder\jritchieShopping\jritchieShopping\bin\Microsoft.AspNet.Identity.Core.dll
+C:\Users\J\Desktop\New folder\jritchieShopping\jritchieShopping\bin\Microsoft.AspNet.Identity.EntityFramework.dll
+C:\Users\J\Desktop\New folder\jritchieShopping\jritchieShopping\bin\Microsoft.AspNet.Identity.Owin.dll
+C:\Users\J\Desktop\New folder\jritchieShopping\jritchieShopping\bin\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.dll
+C:\Users\J\Desktop\New folder\jritchieShopping\jritchieShopping\bin\Microsoft.Owin.dll
+C:\Users\J\Desktop\New folder\jritchieShopping\jritchieShopping\bin\Microsoft.Owin.Host.SystemWeb.dll
+C:\Users\J\Desktop\New folder\jritchieShopping\jritchieShopping\bin\Microsoft.Owin.Security.Cookies.dll
+C:\Users\J\Desktop\New folder\jritchieShopping\jritchieShopping\bin\Microsoft.Owin.Security.dll
+C:\Users\J\Desktop\New folder\jritchieShopping\jritchieShopping\bin\Microsoft.Owin.Security.Facebook.dll
+C:\Users\J\Desktop\New folder\jritchieShopping\jritchieShopping\bin\Microsoft.Owin.Security.Google.dll
+C:\Users\J\Desktop\New folder\jritchieShopping\jritchieShopping\bin\Microsoft.Owin.Security.MicrosoftAccount.dll
+C:\Users\J\Desktop\New folder\jritchieShopping\jritchieShopping\bin\Microsoft.Owin.Security.OAuth.dll
+C:\Users\J\Desktop\New folder\jritchieShopping\jritchieShopping\bin\Microsoft.Owin.Security.Twitter.dll
+C:\Users\J\Desktop\New folder\jritchieShopping\jritchieShopping\bin\Microsoft.Web.Infrastructure.dll
+C:\Users\J\Desktop\New folder\jritchieShopping\jritchieShopping\bin\Newtonsoft.Json.dll
+C:\Users\J\Desktop\New folder\jritchieShopping\jritchieShopping\bin\Owin.dll
+C:\Users\J\Desktop\New folder\jritchieShopping\jritchieShopping\bin\System.Web.Helpers.dll
+C:\Users\J\Desktop\New folder\jritchieShopping\jritchieShopping\bin\System.Web.Mvc.dll
+C:\Users\J\Desktop\New folder\jritchieShopping\jritchieShopping\bin\System.Web.Optimization.dll
+C:\Users\J\Desktop\New folder\jritchieShopping\jritchieShopping\bin\System.Web.Razor.dll
+C:\Users\J\Desktop\New folder\jritchieShopping\jritchieShopping\bin\System.Web.WebPages.Deployment.dll
+C:\Users\J\Desktop\New folder\jritchieShopping\jritchieShopping\bin\System.Web.WebPages.dll
+C:\Users\J\Desktop\New folder\jritchieShopping\jritchieShopping\bin\System.Web.WebPages.Razor.dll
+C:\Users\J\Desktop\New folder\jritchieShopping\jritchieShopping\bin\WebGrease.dll
+C:\Users\J\Desktop\New folder\jritchieShopping\jritchieShopping\bin\EntityFramework.xml
+C:\Users\J\Desktop\New folder\jritchieShopping\jritchieShopping\bin\EntityFramework.SqlServer.xml
+C:\Users\J\Desktop\New folder\jritchieShopping\jritchieShopping\bin\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.xml
+C:\Users\J\Desktop\New folder\jritchieShopping\jritchieShopping\bin\System.Web.Helpers.xml
+C:\Users\J\Desktop\New folder\jritchieShopping\jritchieShopping\bin\System.Web.Mvc.xml
+C:\Users\J\Desktop\New folder\jritchieShopping\jritchieShopping\bin\System.Web.Optimization.xml
+C:\Users\J\Desktop\New folder\jritchieShopping\jritchieShopping\bin\System.Web.Razor.xml
+C:\Users\J\Desktop\New folder\jritchieShopping\jritchieShopping\bin\System.Web.WebPages.xml
+C:\Users\J\Desktop\New folder\jritchieShopping\jritchieShopping\bin\System.Web.WebPages.Deployment.xml
+C:\Users\J\Desktop\New folder\jritchieShopping\jritchieShopping\bin\System.Web.WebPages.Razor.xml
+C:\Users\J\Desktop\New folder\jritchieShopping\jritchieShopping\bin\Antlr3.Runtime.pdb
+C:\Users\J\Desktop\New folder\jritchieShopping\jritchieShopping\bin\Newtonsoft.Json.xml
+C:\Users\J\Desktop\New folder\jritchieShopping\jritchieShopping\bin\Microsoft.AspNet.Identity.Core.xml
+C:\Users\J\Desktop\New folder\jritchieShopping\jritchieShopping\bin\Microsoft.AspNet.Identity.Owin.xml
+C:\Users\J\Desktop\New folder\jritchieShopping\jritchieShopping\bin\Microsoft.AspNet.Identity.EntityFramework.xml
+C:\Users\J\Desktop\New folder\jritchieShopping\jritchieShopping\bin\Microsoft.Owin.xml
+C:\Users\J\Desktop\New folder\jritchieShopping\jritchieShopping\bin\Microsoft.Owin.Host.SystemWeb.xml
+C:\Users\J\Desktop\New folder\jritchieShopping\jritchieShopping\bin\Microsoft.Owin.Security.xml
+C:\Users\J\Desktop\New folder\jritchieShopping\jritchieShopping\bin\Microsoft.Owin.Security.Facebook.xml
+C:\Users\J\Desktop\New folder\jritchieShopping\jritchieShopping\bin\Microsoft.Owin.Security.Cookies.xml
+C:\Users\J\Desktop\New folder\jritchieShopping\jritchieShopping\bin\Microsoft.Owin.Security.OAuth.xml
+C:\Users\J\Desktop\New folder\jritchieShopping\jritchieShopping\bin\Microsoft.Owin.Security.Google.xml
+C:\Users\J\Desktop\New folder\jritchieShopping\jritchieShopping\bin\Microsoft.Owin.Security.Twitter.xml
+C:\Users\J\Desktop\New folder\jritchieShopping\jritchieShopping\bin\Microsoft.Owin.Security.MicrosoftAccount.xml
+C:\Users\J\Desktop\New folder\jritchieShopping\jritchieShopping\bin\Microsoft.ApplicationInsights.xml
+C:\Users\J\Desktop\New folder\jritchieShopping\jritchieShopping\bin\Microsoft.AI.DependencyCollector.xml
+C:\Users\J\Desktop\New folder\jritchieShopping\jritchieShopping\bin\Microsoft.AI.ServerTelemetryChannel.xml
+C:\Users\J\Desktop\New folder\jritchieShopping\jritchieShopping\bin\Microsoft.AI.WindowsServer.xml
+C:\Users\J\Desktop\New folder\jritchieShopping\jritchieShopping\bin\Microsoft.AI.Web.xml
+C:\Users\J\Desktop\New folder\jritchieShopping\jritchieShopping\obj\Debug\jritchieShopping.csprojResolveAssemblyReference.cache
+C:\Users\J\Desktop\New folder\jritchieShopping\jritchieShopping\obj\Debug\jritchieShopping.csproj.CoreCompileInputs.cache
+C:\Users\J\Desktop\New folder\jritchieShopping\jritchieShopping\obj\Debug\jritchieShopping.dll
+C:\Users\J\Desktop\New folder\jritchieShopping\jritchieShopping\obj\Debug\jritchieShopping.pdb

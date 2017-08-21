@@ -1,0 +1,224 @@
+﻿/*#navbar {
+    position: fixed;
+    overflow: auto;
+    height: 100%;
+    width: 175px;
+    top: 100px;
+    padding-top: 10px;
+    padding-left: 10px;
+}
+
+#closeNavbar {
+    margin-right:20px;
+    font-size:24px;
+}
+
+.navMenuHeader {
+    font-size:24px;
+}
+
+    .navMenuHeader a {
+        font-size:24px;
+        display:block;
+        text-decoration:none;
+        /*color:black;
+        color:rgb(230,90,0);
+    }
+
+    .navMenuHeader i {
+        color:rgb(230,90,0);
+    }
+
+.navItem a {
+    display:block; 
+    color:gray; 
+    color:rgb(230,90,0);
+    font-size:18px; 
+    text-decoration:none;
+}
+
+    .navItem a:hover {
+        background-color:gray;
+        color:white;
+        background-color:rgb(230,90,0);
+        color:black;
+        padding-left: 10px
+    }
+
+    .navItem #collection {
+        color:rgb(230,90,0);
+    }
+
+
+    .navItem #collectionYears a {
+        padding-left:14px;
+    }
+
+        .navItem #collectionYears a:hover {
+            padding-left:24px;
+        }
+
+#cartAndSearch {
+    margin: 20px 0px 2px 0px;
+}
+
+    #cartAndSearch p {
+        font-size:20px;
+    }*/
+
+
+.headerImageText {
+    text-align:center;
+    color: rgb(230,90,0);
+    text-shadow: 2px 2px 4px rgba(0,0,0,.5);
+    /*text-shadow: -1px 0 black, 0 1px black, 1px 0 black, 0 -1px black;*/
+    background-color: rgba(255,255,255,.75);
+    padding: 20px;
+    border-top-left-radius: 10px;
+    border-top-right-radius: 10px;
+    border-bottom-left-radius: 10px;
+    border-bottom-right-radius: 10px;
+    border: 1px double rgb(255,120,0);
+}
+
+    .headerImageText .btn {
+        margin-top:10px;
+        color: black;
+        background-color: rgb(255,120,0);
+        text-shadow: 0 0 0 black;
+    }
+
+.itemDisplay {
+    margin-top:40px;
+    background-color:white;
+    border-width:thick;
+    border-style:solid;
+    border-color:rgb(230,90,0);
+}
+
+#itemsCount {
+    margin-top:18px;
+    margin-bottom:18px;
+    margin-left:10px;
+}
+
+.itemPrice {
+    font-weight:bold;
+}
+
+#subscribeSection {
+    background-color: black;
+    padding: 1px 20px 30px 20px;
+    display: block;
+}
+
+    #subscribeSection h1 {
+        color:white;
+    }
+
+    #subscribeSection p {
+        color:white;
+    }
+
+#subscribeEmail {
+    width:100%;
+    padding:8px;
+}
+
+    #subscribeEmail:focus {
+        outline:solid;
+        outline-width:1px;
+        outline-color:rgb(230,90,0);
+    }
+
+#subscribeButton {
+    border: none;
+    background-color: rgb(230,90,0);
+    color: white;
+    padding: 6px 12px;
+    margin-top: 10px;
+}
+
+    #subscribeButton:hover{
+        background-color:rgb(255,120,0);
+        color:black;
+        cursor:pointer;
+    }
+
+#storeDetails {
+    background: darkorange; /* For browsers that do not support gradients */
+    background: -webkit-linear-gradient(white, rgb(230,90,0));
+    /*background: -webkit-linear-gradient(left, white 10%, rgb(230,90,0) 45%, rgb(230,90,0) 55%, white 90%);*/
+    /*background-color: lightgray;*/
+    padding: 20px 20px 20px 20px;
+    margin-left: 0px;
+    margin-right: 0px;
+}
+
+#contact {
+    color: rgb(255,120,0);
+}
+
+#contact input {
+    width: 80%;
+    padding-left: 4px;
+}
+
+#sendButton {
+    border:none;
+    background-color:rgb(230,90,0);
+    color:white;
+    /*width: 80%;*/
+    /*padding-left:4px;
+    padding-top:4px;
+    padding-bottom:4px;*/
+    /*padding:4px;*/
+}
+
+    #sendButton:hover {
+        background-color: rgb(255,120,0);
+        color: black;
+        cursor: pointer;
+    }
+
+
+#newsletterButton {
+    color:white;
+    background-color:black;
+    margin-top:6px;
+}
+
+#newsletterButton:hover {
+    background-color: black;
+    color: rgb(255,120,0);
+    cursor: pointer;
+}
+
+#about a {
+    color:black;
+    text-decoration:underline;
+}
+
+#about #findStoreButton {
+    color:black;
+    border:none;
+    background-color:transparent;
+}
+
+    #about #findStoreButton:hover {
+        background-color:black;
+        color:rgb(255,120,0);
+    }
+
+footer {
+    padding-top:10px;
+    padding-bottom:2px;
+    text-align:center;
+    color:white;
+    background-color:black;
+}
+
+    footer a {
+        color:white;
+        text-decoration:underline;
+    }

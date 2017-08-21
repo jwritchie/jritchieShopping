@@ -1,0 +1,84 @@
+﻿@model jritchieShopping.Models.CodeFirst.Item
+
+@{
+    ViewBag.Title = "Details";
+}
+
+
+<div style="background-color:white">
+
+    <h2>Details</h2>
+
+    <div>
+        <h4>@Model.Name</h4>
+        <h4>@Html.DisplayFor(model => model.Name)</h4>
+
+        <p style="font-weight:bold">@Model.Price.ToString("N2")</p>
+
+
+    <hr />
+    <dl class="dl-horizontal">
+        <dt>
+            @Html.DisplayNameFor(model => model.CreateDate)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.CreateDate)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.UpdatedDate)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.UpdatedDate)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.Name)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.Name)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.Price)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.Price)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.MediaURL)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.MediaURL)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.Description)
+        </dt>
+
+        <dd>
+            @Html.Raw(Model.Description)
+        </dd>
+
+    </dl>
+</div>
+
+
+<div>
+    <img class="img-responsive" src="@Model.MediaURL" style="display:block; margin: auto;" />
+    <img class="img-responsive" src="@Html.DisplayFor(model => model.MediaURL)" style="display:block; margin: auto" />
+</div>
+
+
+<p>
+    @Html.ActionLink("Edit", "Edit", new { id = Model.Id }) |
+    @Html.ActionLink("Back to List", "Index")
+</p>
+
+</div>

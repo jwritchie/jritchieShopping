@@ -1,0 +1,45 @@
+﻿@model IEnumerable<jritchieShopping.Models.CodeFirst.Item>
+
+<!--Item display-->
+<div class="itemDisplay">
+
+    <!--Item count-->
+    <div class="row" id="itemsCount">
+        <div class="col-md-12">
+            8 items available
+        </div>
+    </div>
+
+
+
+@if(User.IsInRole("Admin")) {
+    @Html.ActionLink("Create New Item", "Create")
+}
+
+
+
+    @*<div class="container">*@
+        <div class="row">
+            @foreach (var item in Model) {      // add property in items to test = Sale/New/etc. use If() to test and style.
+                <div class="text-center">
+                    <div class="col-xs-3">
+                        <a href="@Url.Action("Details", "Items", new { id = item.Id})" >    @*// Name of Action in Controller, Name of Controller, Id to pass*@
+                            <img class="img-responsive" src="@item.MediaURL" style="display: block; margin: auto;" />
+                        </a>
+                        <p>
+                            @item.Name
+                            <br />
+                            <span class="itemPrice">$@item.Price.ToString("N2")</span>
+
+                            @if (User.IsInRole("Admin")) {
+                                @Html.ActionLink("Edit", "Edit", new { id = item.Id }) <span>|</span>
+                                @Html.ActionLink("Delete", "Delete", new { id = item.Id })
+                            }
+                        </p>
+                    </div>
+                </div>
+            }
+        </div>
+    @*</div>*@
+
+</div>
