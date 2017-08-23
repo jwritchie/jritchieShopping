@@ -34,10 +34,7 @@
                  else
                 {
                     <a href=" @Url.Action("Index", "Manage")" title="Update Account Profile" style="color:rgb(255,120,0)">Welcome, @ViewBag.Firstname</a>
-                    @Html.ActionLink("Hello " + User.Identity.GetUserName() + "!", "Index", "Manage", routeValues: null, htmlAttributes: new { title = "Update Account Profile", style = "color:rgb(230,90,0)" })
-
-                    var findIdentity = User.Identity.GetUserId();
-                    var letsPauseHere = findIdentity;
+                    @*@Html.ActionLink("Hello " + User.Identity.GetUserName() + "!", "Index", "Manage", routeValues: null, htmlAttributes: new { title = "Update Account Profile", style = "color:rgb(230,90,0)" })*@
                 }
             }
         </li>
@@ -50,7 +47,7 @@ else
 {
     <ul class="nav navbar-nav navbar-right">
         <li>@Html.ActionLink("Register", "Register", "Account", routeValues: null, htmlAttributes: new { id = "registerLink", style = "color:rgb(255,120,0)" } )</li>
-        <li>@Html.ActionLink("Log in", "Login", "Account", routeValues: null, htmlAttributes: new { id = "loginLink", style = "color:rgb(255,120,0)" })</li>
+        <li>@Html.ActionLink("Log in", "Login", "Account", routeValues: new { returnUrl = Request.Url.AbsolutePath }, htmlAttributes: new { id = "loginLink", style = "color:rgb(255,120,0)" })</li>
     </ul>
 }
 

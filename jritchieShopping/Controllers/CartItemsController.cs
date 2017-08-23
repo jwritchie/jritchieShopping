@@ -42,37 +42,39 @@ namespace jritchieShopping.Controllers
             return View();
         }
 
-        // POST: CartItems/Create
-        // To protect from overposting attacks, please enable the specific properties you want to bind to, for 
-        // more details see https://go.microsoft.com/fwlink/?LinkId=317598.
-        [HttpPost]
-        [ValidateAntiForgeryToken]
-        public ActionResult Create([Bind(Include = "Id,ItemId,CustomerId,Count,Created")] CartItem cartItem)
-        {
-            if (ModelState.IsValid)
-            {
-                db.CartItems.Add(cartItem);
-                db.SaveChanges();
-                return RedirectToAction("Index");
-            }
+        //// POST: CartItems/Create
+        //// To protect from overposting attacks, please enable the specific properties you want to bind to, for 
+        //// more details see https://go.microsoft.com/fwlink/?LinkId=317598.
+        //[HttpPost]
+        //[ValidateAntiForgeryToken]
+        //public ActionResult Create([Bind(Include = "Id,ItemId,CustomerId,Count,Created")] CartItem cartItem)
+        //{
+        //    if (ModelState.IsValid)
+        //    {
+        //        db.CartItems.Add(cartItem);
+        //        db.SaveChanges();
+        //        return RedirectToAction("Index");
+        //    }
 
-            return View(cartItem);
-        }
+        //    return View(cartItem);
+        //}
 
-
-        // POST: CartItems/Create (Add to cart)
+        // POST: CartItems/AddToCart/5
         [HttpPost]
         [ValidateAntiForgeryToken]
         public ActionResult AddToCart(int? id)
         {
-            // find item using item.id
-            // extract data values
-            // plug data into cartItem obj.
+            var user = db.Users.Find(User.Identity.GetUserId());
+            if (user == null)
+            {
+                return RedirectToAction("Login", "Account");
+            }
 
             if (id == null)
             {
                 return new HttpStatusCodeResult(HttpStatusCode.BadRequest);
             }
+
             Item item = db.Items.Find(id);
             if (item == null)
             {
@@ -80,23 +82,15 @@ namespace jritchieShopping.Controllers
             }
 
             CartItem cartItem = new CartItem();
-            cartItem.ItemId = item.Id;
-            cartItem.CustomerId = User.Identity.GetUserId();
+            cartItem.ItemId = (int)id;
+            cartItem.CustomerId = user.Id;
             cartItem.Count = 1;
-            cartItem.Created = System.DateTime.Now;
+            cartItem.Created = DateTime.Now;
 
-            //[Bind(Include = "Id,ItemId,CustomerId,Count,Created")]
-
-
-            if (ModelState.IsValid)
-            {
-                db.CartItems.Add(cartItem);
-                db.SaveChanges();
-                return RedirectToAction("Index", "Items");
-            }
-            return View(cartItem);
+            db.CartItems.Add(cartItem);
+            db.SaveChanges();
+            return RedirectToAction("Index");               // CartItem Index view.
         }
-
 
         // GET: CartItems/Edit/5
         public ActionResult Edit(int? id)
