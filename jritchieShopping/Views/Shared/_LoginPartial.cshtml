@@ -7,20 +7,39 @@
 
     <ul class="nav navbar-nav navbar-right">
         <li>
-            <i class="fa fa-shopping-cart" style="font-size:20px; margin-top:14px; color:rgb(255,120,0)"> </i>
-            <span style="color:rgb(255,120,0)">&nbsp;&nbsp;&nbsp;&nbsp;@ViewBag.CartItems.Count</span>
-            @if (ViewBag.CartItems.Count == 1) {
-                <span style="color:rgb(255,120,0)">item</span>
-            } else {
-                <span style="color:rgb(255,120,0)">items</span>
-            }
-            &nbsp;
-            &nbsp;
+            <a href="@Url.Action("Index", "CartItems")">
+                <i class="fa fa-shopping-cart" style="font-size:20px; color:rgb(255,120,0)"> </i>
+                <span style="color:rgb(255,120,0)">&nbsp;&nbsp;&nbsp;&nbsp;@ViewBag.CartItems.Count</span>
+                @{ 
+                    if (ViewBag.CartItems.Count == 1)
+                    {
+                        <span style="color:rgb(255,120,0)">item</span>
+                    }
+                     else
+                    {
+                        <span style="color:rgb(255,120,0)">items</span>
+                    }
+                }
+                &nbsp;
+                &nbsp;
+            </a>
         </li>
         <li style="color:rgb(255,120,0); margin-top:14px">|</li>
         <li>
-            @*@Html.ActionLink("Hello " + User.Identity.GetUserName() + "!", "Index", "Manage", routeValues: null, htmlAttributes: new { title = "Update Account Profile", style = "color:rgb(230,90,0)" })*@
-            <a href=" @Url.Action("Index", "Manage")" title="Update Account Profile" style="color:rgb(255,120,0)">Welcome, @ViewBag.Firstname</a>       
+            @{ 
+                if (User.IsInRole("Admin"))
+                {
+                    <a href=" @Url.Action("Index", "Manage")" title="Update Account Profile" style="color:rgb(255,120,0)"><span style="color:white" >Admin - </span>@ViewBag.Firstname</a>
+                }
+                 else
+                {
+                    <a href=" @Url.Action("Index", "Manage")" title="Update Account Profile" style="color:rgb(255,120,0)">Welcome, @ViewBag.Firstname</a>
+                    @Html.ActionLink("Hello " + User.Identity.GetUserName() + "!", "Index", "Manage", routeValues: null, htmlAttributes: new { title = "Update Account Profile", style = "color:rgb(230,90,0)" })
+
+                    var findIdentity = User.Identity.GetUserId();
+                    var letsPauseHere = findIdentity;
+                }
+            }
         </li>
         <li style="color:rgb(255,120,0); margin-top:14px">|</li>
         <li><a href="javascript:document.getElementById('logoutForm').submit()" style="color:rgb(255,120,0)">Log off</a></li>

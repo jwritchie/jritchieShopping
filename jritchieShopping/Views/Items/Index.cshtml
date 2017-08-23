@@ -1,7 +1,7 @@
 ﻿@model IEnumerable<jritchieShopping.Models.CodeFirst.Item>
 
 <!--Item display-->
-<div class="itemDisplay">
+<div class="subpageDisplay">
 
     <!--Item count-->
     <div class="row" id="itemsCount">
@@ -12,8 +12,11 @@
 
 
 
-@if(User.IsInRole("Admin")) {
-    @Html.ActionLink("Create New Item", "Create")
+@if (User.IsInRole("Admin"))
+{
+    <div style="text-align:center; margin-bottom:20px;">
+        @Html.ActionLink("Create New Item", "Create", null, new { style = "color:rgb(255,120,0); text-decoration:underline"})
+    </div>
 }
 
 
@@ -23,23 +26,32 @@
             @foreach (var item in Model) {      // add property in items to test = Sale/New/etc. use If() to test and style.
                 <div class="text-center">
                     <div class="col-xs-3">
-                        <a href="@Url.Action("Details", "Items", new { id = item.Id})" >    @*// Name of Action in Controller, Name of Controller, Id to pass*@
-                            <img class="img-responsive" src="@item.MediaURL" style="display: block; margin: auto;" />
+                        <a href="@Url.Action("Details", "Items", new { id = item.Id})">
+                            @*// Name of Action in Controller, Name of Controller, Id to pass*@
+                            <img class="img-responsive" src="@item.MediaURL" style="display: block; margin: auto; border:2px solid rgb(255,120,0)" />                      
                         </a>
                         <p>
                             @item.Name
                             <br />
                             <span class="itemPrice">$@item.Price.ToString("N2")</span>
 
-                            @if (User.IsInRole("Admin")) {
-                                @Html.ActionLink("Edit", "Edit", new { id = item.Id }) <span>|</span>
-                                @Html.ActionLink("Delete", "Delete", new { id = item.Id })
+                            @if (User.IsInRole("Admin"))
+                            {
+                                @Html.ActionLink("Edit", "Edit", new { id = item.Id }, new { style = "color:rgb(255,120,0); text-decoration:underline" }) <span>|</span>
+                                @Html.ActionLink("Delete", "Delete", new { id = item.Id }, new { style = "color:rgb(255,120,0); text-decoration:underline" })
                             }
                         </p>
+                    
+                        <div>
+                            <a class="btn btn-default" style="background-color:rgb(255,120,0); position:absolute; top:80%; left:50%; transform: translate(-50%, -80%)" href="@Url.Action("AddToCart", "CartItems", new { id = item.Id})">Add to Cart</a>
+                        </div>
+                                  
                     </div>
                 </div>
-            }
+             }
         </div>
     @*</div>*@
 
 </div>
+
+

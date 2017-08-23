@@ -21,7 +21,6 @@
         <div class="carousel-inner" role="listbox">
             <div class="item active">
                 <img class="img-responsive center-block" src="~/assets/Images/Carousel/patekphilippe_5180_1R_001.jpg">
-                @*<img class="img-responsive center-block" src="~/assets/Images/Carousel/patekphilippe_5180_1R_001.jpg" width="460" height="345">*@
             </div>
             <div class="item">
                 <img class="img-responsive center-block" src="~/assets/Images/Carousel/patekphilippe_5396R_012.jpg">
@@ -40,20 +39,15 @@
     </div>
 
     <div class="headerImageText" style="position:absolute; top:200px; left: 200px">
+
+        @{ 
+            var currentMonth = System.DateTime.Today.ToString("MMMM");
+        }
+
         <h1>Patek Philippe on sale!</h1>
-        <h3>One month only: 10-15% off</h3>
-        @*<button>SHOP NOW</button>*@
+        <h3>@currentMonth only: 10-15% off</h3>
         <a class="btn btn-default" href="@Url.Action("Index", "Items")">Shop now</a>
     </div>
-
-    @*<div style="background-color:white">
-        <div>
-            <p>
-                <a class="btn btn-default" href="@Url.Action("Index", "Items")">Shop now!</a>
-            </p>
-        </div>
-    </div>*@
-
 
 </div>
 

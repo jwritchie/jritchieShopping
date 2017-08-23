@@ -9,6 +9,8 @@ using System.Web.Mvc;
 using jritchieShopping.Models;
 using jritchieShopping.Models.CodeFirst;
 
+using Microsoft.AspNet.Identity;
+
 namespace jritchieShopping.Controllers
 {
     public class CartItemsController : Universal
@@ -56,6 +58,45 @@ namespace jritchieShopping.Controllers
 
             return View(cartItem);
         }
+
+
+        // POST: CartItems/Create (Add to cart)
+        [HttpPost]
+        [ValidateAntiForgeryToken]
+        public ActionResult AddToCart(int? id)
+        {
+            // find item using item.id
+            // extract data values
+            // plug data into cartItem obj.
+
+            if (id == null)
+            {
+                return new HttpStatusCodeResult(HttpStatusCode.BadRequest);
+            }
+            Item item = db.Items.Find(id);
+            if (item == null)
+            {
+                return HttpNotFound();
+            }
+
+            CartItem cartItem = new CartItem();
+            cartItem.ItemId = item.Id;
+            cartItem.CustomerId = User.Identity.GetUserId();
+            cartItem.Count = 1;
+            cartItem.Created = System.DateTime.Now;
+
+            //[Bind(Include = "Id,ItemId,CustomerId,Count,Created")]
+
+
+            if (ModelState.IsValid)
+            {
+                db.CartItems.Add(cartItem);
+                db.SaveChanges();
+                return RedirectToAction("Index", "Items");
+            }
+            return View(cartItem);
+        }
+
 
         // GET: CartItems/Edit/5
         public ActionResult Edit(int? id)

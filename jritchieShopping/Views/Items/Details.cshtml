@@ -5,80 +5,98 @@
 }
 
 
-<div style="background-color:white">
+<div class="subpageDisplay">
 
-    <h2>Details</h2>
+    <div style="text-align:center; border-bottom:1px solid rgb(255,120,0)">
+        <h2>@Model.Name</h2>
+        <h4 style="font-weight:bold">$@Model.Price.ToString("N2")</h4>
+    </div>
 
-    <div>
-        <h4>@Model.Name</h4>
-        <h4>@Html.DisplayFor(model => model.Name)</h4>
+    <div class="container-fluid" style="margin-top:20px; padding-bottom:20px; border-bottom:1px solid rgb(255,120,0)">
+        <div class=" row">
 
-        <p style="font-weight:bold">@Model.Price.ToString("N2")</p>
+            @{
+                if (User.IsInRole("Admin"))
+                {
+
+                    <div class=" col-md-4">
+                        <dl class="dl-horizontal">
+                            <dt>
+                                @Html.DisplayNameFor(model => model.CreateDate)
+                            </dt>
+
+                            <dd>
+                                @Html.DisplayFor(model => model.CreateDate)
+                            </dd>
+
+                            <dt>
+                                @Html.DisplayNameFor(model => model.UpdatedDate)
+                            </dt>
+
+                            <dd>
+                                @Html.DisplayFor(model => model.UpdatedDate)
+                            </dd>
+
+                            <dt>
+                                @Html.DisplayNameFor(model => model.MediaURL)
+                            </dt>
+
+                            <dd>
+                                @Html.DisplayFor(model => model.MediaURL)
+                            </dd>
+                        </dl>
+                    </div>
+
+                    <div class=" col-md-4">
+                        <div>
+                            <h4 style="font-weight:bold">Description</h4>
+                        </div>
+                        <div>
+                            @Html.Raw(Model.Description)
+                        </div>
+                    </div>
+
+                    <div class=" col-md-4">
+                        <img class="img-responsive" src="@Model.MediaURL" style="display: block; margin: auto; border:2px solid rgb(255,120,0)" />
+                    </div>
+                }
+                else
+                {
+                    <div class=" col-md-6">
+                        <div style="margin-left:60px">
+                            <h4 style="font-weight:bold">Description</h4>
+                        </div>
+                        <div style="margin-left:60px">
+                            @Html.Raw(Model.Description)
+                        </div>
+                    </div>
+
+                    <div class=" col-md-6">
+                        <img class="img-responsive" src="@Model.MediaURL" style="display: block; margin: auto; border:2px solid rgb(255,120,0)" />
+                    </div>
+                }
+            }
+        </div>
+    </div>
 
 
-    <hr />
-    <dl class="dl-horizontal">
-        <dt>
-            @Html.DisplayNameFor(model => model.CreateDate)
-        </dt>
-
-        <dd>
-            @Html.DisplayFor(model => model.CreateDate)
-        </dd>
-
-        <dt>
-            @Html.DisplayNameFor(model => model.UpdatedDate)
-        </dt>
-
-        <dd>
-            @Html.DisplayFor(model => model.UpdatedDate)
-        </dd>
-
-        <dt>
-            @Html.DisplayNameFor(model => model.Name)
-        </dt>
-
-        <dd>
-            @Html.DisplayFor(model => model.Name)
-        </dd>
-
-        <dt>
-            @Html.DisplayNameFor(model => model.Price)
-        </dt>
-
-        <dd>
-            @Html.DisplayFor(model => model.Price)
-        </dd>
-
-        <dt>
-            @Html.DisplayNameFor(model => model.MediaURL)
-        </dt>
-
-        <dd>
-            @Html.DisplayFor(model => model.MediaURL)
-        </dd>
-
-        <dt>
-            @Html.DisplayNameFor(model => model.Description)
-        </dt>
-
-        <dd>
-            @Html.Raw(Model.Description)
-        </dd>
-
-    </dl>
-</div>
-
-
-<div>
-    <img class="img-responsive" src="@Model.MediaURL" style="display:block; margin: auto;" />
-    <img class="img-responsive" src="@Html.DisplayFor(model => model.MediaURL)" style="display:block; margin: auto" />
-</div>
-
-
-<p>
-    @Html.ActionLink("Edit", "Edit", new { id = Model.Id }) |
-    @Html.ActionLink("Back to List", "Index")
-</p>
+        @{
+            if (User.IsInRole("Admin"))
+            { 
+                <p style="text-align:center; padding:20px 0px 10px 0px">
+                    @Html.ActionLink("Edit", "Edit", new { id = Model.Id }, new { style = "color:rgb(255,120,0); text-decoration:underline" })
+                    <span>|</span>
+                    @Html.ActionLink("Delete", "Delete", new { id = Model.Id }, new { style = "color:rgb(255,120,0); text-decoration:underline" })
+                    <span>|</span>
+                    @Html.ActionLink("Back to List", "Index", null, new { style = "color:rgb(255,120,0); text-decoration:underline" })
+                </p>
+            }
+            else
+            {
+                <p style="text-align:center; padding:20px 0px 10px 0px">
+                    @Html.ActionLink("Back to List", "Index", null, new { style = "color:rgb(255,120,0); text-decoration:underline" })
+                </p>
+            }
+        }
 
 </div>
