@@ -21,7 +21,31 @@ namespace jritchieShopping.Models
                 ViewBag.LastName = user.LastName;
                 ViewBag.FullName = user.FullName;
 
-                ViewBag.CartItems = user.CartItems.ToList();
+
+                // LINQ:  c => c.CustomerId  iterates through all customerIds. 'c' is a variable. This is similar to a foreach loop.
+                // We want cartitems where customerId == current logged-in user's id.
+
+                ViewBag.CartItems = db.CartItems.AsNoTracking().Where(c => c.CustomerId == user.Id).ToList();     // Close db connection after each access (no tracking). 
+                //ViewBag.CartItems = user.CartItems.ToList(); 
+
+
+
+                // Ryan's code for total cart items using LINQ.
+                //ViewBag.TotalCartItems = user.CartItems.Sum(c => c.Count);
+                ViewBag.TotalCartItems = db.CartItems.AsNoTracking().Where(c => c.CustomerId == user.Id).Sum(c => c.Count);
+
+                // My foreach code for total cart items.
+                //int totalCount = 0;
+                //foreach (var cartItem in user.CartItems)
+                //{
+                //    totalCount += cartItem.Count;
+                //}
+                //ViewBag.CartItemsTotalCount = totalCount;
+
+
+
+
+                /***  Below code is from Ryan's project ***/
                 //ViewBag.ItemTypes = db.ItemTypes.AsNoTracking().OrderBy(t => t.TypeName).ToList();
                 //ViewBag.CartItems = user.CartItems.ToList();
                 //decimal count = 0;

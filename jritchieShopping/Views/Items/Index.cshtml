@@ -6,7 +6,10 @@
     <!--Item count-->
     <div class="row" id="itemsCount">
         <div class="col-md-12">
-            8 items available
+            @{ 
+                var itemCount = Model.Count();
+            }
+            @itemCount items available
         </div>
     </div>
 
@@ -19,17 +22,18 @@
     </div>
 }
 
-
+    /*  Note: can add other properties in items to test: OnSale, New, etc.  Then use If() to test and style.*/
 
     @*<div class="container">*@
         <div class="row">
             @foreach (var item in Model)
-            {      // add property in items to test = Sale/New/etc. use If() to test and style.
+            {      
                 <div class="text-center">
                     <div class="col-xs-3">
+                        @*// Name of Action in Controller, Name of Controller, Id to pass*@
                         <a href="@Url.Action("Details", "Items", new { id = item.Id })">
-                            @*// Name of Action in Controller, Name of Controller, Id to pass*@
-                            <img class="img-responsive" src="@item.MediaURL" style="display: block; margin: auto; border:2px solid rgb(255,120,0)" />                      
+                            @*// Url.Content() strips off '~' from '~/assets/Images/m4.jpg for use with relative path*@
+                            <img class="img-responsive" src="@Url.Content(item.MediaURL)" style="display: block; margin: auto; border:2px solid rgb(255,120,0)" />                      
                         </a>
                         <p>
                             @item.Name

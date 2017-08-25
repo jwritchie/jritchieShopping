@@ -1,4 +1,12 @@
 ﻿@using Microsoft.AspNet.Identity
+
+
+@*// Test whether user is logged-in.
+    if (Request.IsAuthenticated) {
+        do stuff ...
+    }*@
+
+
 @if (Request.IsAuthenticated)
 {
     using (Html.BeginForm("LogOff", "Account", FormMethod.Post, new { id = "logoutForm", @class = "navbar-right" }))
@@ -9,7 +17,10 @@
         <li>
             <a href="@Url.Action("Index", "CartItems")">
                 <i class="fa fa-shopping-cart" style="font-size:20px; color:rgb(255,120,0)"> </i>
-                <span style="color:rgb(255,120,0)">&nbsp;&nbsp;&nbsp;&nbsp;@ViewBag.CartItems.Count</span>
+
+                <span style="color:rgb(255,120,0)">&nbsp;&nbsp;&nbsp;&nbsp;@ViewBag.TotalCartItems</span>
+                @*<span style="color:rgb(255,120,0)">&nbsp;&nbsp;&nbsp;&nbsp;@ViewBag.CartItemsTotalCount</span>*@
+                @*<span style="color:rgb(255,120,0)">&nbsp;&nbsp;&nbsp;&nbsp;@ViewBag.CartItems.Count</span>*@
                 @{ 
                     if (ViewBag.CartItems.Count == 1)
                     {
@@ -50,8 +61,3 @@ else
         <li>@Html.ActionLink("Log in", "Login", "Account", routeValues: new { returnUrl = Request.Url.AbsolutePath }, htmlAttributes: new { id = "loginLink", style = "color:rgb(255,120,0)" })</li>
     </ul>
 }
-
-@*// Test whether user is logged-in.
-if (Request.IsAuthenticated) {
-    do stuff ...
-}*@

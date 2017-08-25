@@ -224,6 +224,7 @@
     <Content Include="assets\Images\Carousel\patekphilippe_5905P_001.jpg" />
     <Content Include="assets\Images\Carousel\patekphilippe_7140R_5940J.jpg" />
     <Content Include="assets\Images\CFW-1300.jpg" />
+    <Content Include="assets\Images\DefaultImage.jpg" />
     <Content Include="assets\Images\m2.jpg" />
     <Content Include="assets\Images\m3.jpg" />
     <Content Include="assets\Images\m5.jpg" />
@@ -378,7 +379,9 @@
     <Content Include="Scripts\tinymce\skins\lightgray\fonts\tinymce-small.ttf" />
     <Content Include="Scripts\tinymce\skins\lightgray\fonts\tinymce-small.eot" />
     <Content Include="Scripts\tinymce\langs\readme.md" />
-    <None Include="Views\Items\Index.cshtml" />
+    <None Include="Properties\PublishProfiles\jritchie-shopping - FTP.pubxml" />
+    <None Include="Properties\PublishProfiles\jritchie-shopping - Web Deploy.pubxml" />
+    <Content Include="Views\Items\Index.cshtml" />
     <Content Include="assets\scripts\ai.0.22.9-build00167.js" />
     <Content Include="assets\scripts\ai.0.22.9-build00167.min.js" />
     <Content Include="assets\scripts\bootstrap.js" />
@@ -477,6 +480,7 @@
   </ItemGroup>
   <ItemGroup>
     <Folder Include="App_Data\" />
+    <Folder Include="assets\Images\Uploads\" />
   </ItemGroup>
   <ItemGroup>
     <Content Include="fonts\glyphicons-halflings-regular.woff" />

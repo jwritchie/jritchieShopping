@@ -23,7 +23,13 @@ namespace jritchieShopping.Models.CodeFirst {
         public decimal unitTotal {
 
             get {
-                return Count * Item.Price;
+
+                if (Item != null)
+                {
+                    return Count * Item.Price;
+                }
+
+                return 0;
             }
         }
     }

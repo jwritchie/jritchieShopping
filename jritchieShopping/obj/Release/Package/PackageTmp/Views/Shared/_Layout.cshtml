@@ -1,0 +1,390 @@
+﻿<!DOCTYPE html>
+<html>
+
+<head>
+    <title>ECommerce App</title>
+    <meta charset="utf-8" />
+
+    <link href="~/assets/Content/bootstrap.css" rel="stylesheet" />
+    <!--<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css"
+          integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u"
+          crossorigin="anonymous">-->
+
+    <link href="~/assets/css/myCustomStyle.css" rel="stylesheet" />
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css" />
+
+</head>
+
+<body style="background-color:black" @*style="max-width:1000px"*@>
+
+
+
+    <nav class="navbar navbar-inverse navbar-fixed-top" style="border-bottom:4px solid rgb(230,90,0)">
+        <div class="container-fluid">
+            <div class="navbar-header">
+                <a class="navbar-brand" href="@Url.Action("Index", "Home")" style="color:rgb(255,120,0)">CF Watches</a>
+            </div>
+            <ul class="nav navbar-nav">
+                <li class="dropdown"><a class="dropdown-toggle" data-toggle="dropdown">Series<span class="caret"></span></a>
+                    <ul class="dropdown-menu">
+                        <li><a href="#">CFW</a></li>
+                        <li><a href="#">CFAW</a></li>
+                    </ul>
+                </li>
+                <li class="dropdown">
+                    <a class="dropdown-toggle" data-toggle="dropdown">Collections<span class="caret"></span></a>
+                    <ul class="dropdown-menu">
+                        <li><a href="#">2017</a></li>
+                        <li><a href="#">2016</a></li>
+                        <li><a href="#">2015</a></li>
+                        <li><a href="#">2014</a></li>
+                    </ul>
+                </li>
+                <li class="dropdown">
+                    <a class="dropdown-toggle" data-toggle="dropdown">Miscellaneous<span class="caret"></span></a>
+                    <ul class="dropdown-menu">
+                        <li><a href="#">Straps</a></li>
+                        <li><a href="#">Parts</a></li>
+                        <li><a href="#">Tools</a></li>
+                        <li><a href="#">Accessories</a></li>
+                    </ul>
+                </li>
+            </ul>
+            <ul class="nav navbar-nav navbar-right" style="padding-right:40px">
+                @Html.Partial("_LoginPartial")
+            </ul>
+            <form class=" navbar-form navbar-right">
+                <div class="input-group">
+                    <input type="text" class="form-control" placeholder="Search">
+                    <div class="input-group-btn">
+                        <button class="btn btn-default" type="submit">
+                            <i class="glyphicon glyphicon-search"></i>
+                        </button>
+                    </div>
+                </div>
+            </form>
+
+        </div>
+    </nav> 
+
+
+    <!-- side navbar starts-->
+    @*<nav id="navbar">
+        <nav id="navbar" style="display:none">
+            <div class="text-right">
+                <p>
+                    <i id="closeNavbar" class="fa fa-times" aria-hidden="true" onclick="closeNavbar()"></i>
+                </p>
+            </div>
+            <div class="navMenuHeader">
+                LOGO
+            </div>
+            <br />
+
+            <!--Navigation items-->
+            <div class="navItem">
+                <a href="#">CFW Series</a>
+                <a href="#">CFAW Series</a>
+
+                <!--Collection year subsections-->
+                <div id="collection" onclick="collectionVisibility()">
+                    <a href="#">Collection <i id="collectionArrow" class="fa fa-caret-right" aria-hidden="true" style="color:black"></i></a>
+                </div>
+                <div id="collectionYears" style="display:none">
+                    <a href="#">2017</a>
+                    <a href="#">2016</a>
+                    <a href="#">2015</a>
+                    <a href="#">2014</a>
+                </div>
+
+                <!--Additional items-->
+                <a href="#">Straps</a>
+                <a href="#">Parts</a>
+                <a href="#">Tools</a>
+                <a href="#">Accessories</a>
+            </div>
+            <br />
+            <div class="navMenuHeader">
+                <i class="fa fa-search"></i>
+                <a href="#contact">Contact</a>
+                <a href="#" data-toggle="modal" data-target="#newsletterModal">Newsletter</a>
+                <a href="#subscribeSection">Subscribe</a>
+            </div>
+        </nav>*@
+    <!--side navbar ends-->
+
+    <!--main content starts-->
+    <div @*style="margin-left:150px;"*@>
+
+        <div class="container-fluid">
+
+
+            <!--Cart and Search icons-->
+            @*<div class="row">
+                <div class="col-md-12" id="cartAndSearch">
+                    <p>
+                    </p>
+                    <p class="text-right">
+                        <i class="fa fa-shopping-cart"> </i>
+                        &nbsp;
+                        <i class="fa fa-search"></i>
+                        &nbsp;
+                        <i id="openNavbar" class="fa fa-bars" onclick="navbarVisibility()"></i>
+                    </p>
+                </div>
+            </div>*@
+
+            <div class="container body-content" style="margin-top:30px">
+
+            <!--Header image and button-->
+            @*<div class="row">
+                <div class="col-md-12">
+                    <div id="headerImage">
+                        <img class="img-responsive" src="~/assets/Images/3.jpg" />
+                        <div class="headerImageText">
+                            <h1>New arrivals</h1>
+                            <h3>COLLECTION 2016</h3>
+                            <button>SHOP NOW</button>
+                        </div>
+                    </div>
+                </div>
+            </div>*@
+
+
+
+                @RenderBody()
+
+
+
+                <!-- Subscribe section-->
+                <div class="row">
+                    <div class="col-md-12">
+                        <div id="subscribeSection">
+                            <h1 style="color:rgb(255,120,0)">Subscribe</h1>
+                            <p>To receive special offers and <span style="color:rgb(255,120,0)">VIP</span> treatment:</p>
+                            <input id="subscribeEmail" placeholder="Enter e-mail" />
+                            <br />
+                            <button id="subscribeButton" class="btn" data-toggle="modal" data-target="#subscribeModal" margin-top:6px">Subscribe</button>
+                        </div>
+                    </div>
+                </div>
+
+                <!--store details-->
+                <div class="row" id="storeDetails">
+                    <!--Contact section-->
+                    <div class="col-md-4">
+                        <div id="contact" class="text-center">
+                            <div style="border:2px solid rgb(230,90,0); background-color:black">
+                                <h4>Contact</h4>
+                                <p>Send us your questions!</p>
+                                <p>
+                                    <input placeholder="Name" />
+                                </p>
+                                <p>
+                                    <input placeholder="Email" />
+                                </p>
+                                <p>
+                                    <input placeholder="Subject" />
+                                </p>
+                                <p>
+                                    <input placeholder="Message" />
+                                </p>
+                                <p>
+                                    <button class="btn" id="sendButton">Send</button>
+                                </p>
+                            </div>
+                            <br />
+                            <p>
+                                <button id="newsletterButton" class="btn" data-toggle="modal" data-target="#newsletterModal">Sign up for our Newsletter</button>
+                                @*<a href="#" data-toggle="modal" data-target="#newsletterModal">Newsletter</a>*@
+                            </p>
+                        </div>
+                    </div>
+
+                    <!-- About section-->
+                    <div class="col-md-4">
+                        <div id="about" class="text-center">
+                            <h4>About</h4>
+                            <p>
+                                <a href="#">About us</a>
+                            </p>
+                            <p>
+                                <a href="#">We're hiring</a>
+                            </p>
+                            <p>
+                                <a href="#">Support</a>
+                            </p>
+                            <p>
+                                <button id="findStoreButton" data-toggle="modal" data-target="#findStoreModal">Find store</button>
+                                <!--<button class="btn btn-primary" data-toggle="modal" data-target="#subscribeModal" style="background-color:red; margin-top:6px">Subscribe</button>-->
+                            </p>
+                            <p>
+                                <a href="#">Shipment</a>
+                            </p>
+                            <p>
+                                <a href="#">Payment</a>
+                            </p>
+                            <p>
+                                <a href="#">Gift card</a>
+                            </p>
+                            <p>
+                                <a href="#">Return</a>
+                            </p>
+                            <p>
+                                <a href="#">Help</a>
+                            </p>
+                        </div>
+                    </div>
+
+                    <!--Store subsection-->
+                    <div class="col-md-4">
+                        <div>
+                            <h4>Store</h4>
+                            <p><i class="fa fa-fw fa-map-marker"> </i>CF Watches</p>
+                            <p><i class="fa fa-fw fa-phone"> </i>1-800-WATCHES</p>
+                            <p><i class="fa fa-fw fa-envelope"> </i>showroom@cfwatches.com</p>
+                            <br>
+                            <!--We accept subsection-->
+                            <h4>We accept</h4>
+                            <p><i class="fa fa-fw fa-cc-amex"> </i> Amex</p>
+                            <p><i class="fa fa-fw fa-credit-card"> </i> Credit Card</p>
+                            <!--Social media icons subsection-->
+                            <br>
+                            <i class="fa fa-facebook-official"> </i>
+                            <i class="fa fa-instagram"> </i>
+                            <i class="fa fa-snapchat"> </i>
+                            <i class="fa fa-pinterest-p"> </i>
+                            <i class="fa fa-twitter"> </i>
+                            <i class="fa fa-linkedin"> </i>
+                        </div>
+                    </div>
+                </div>
+
+                <!--footer starts-->
+                <footer>
+                    <div class="row">
+                        <div class="col-md-12">
+                            <p>
+                                <!--Note: copyright symbol HTML Character Entity-->
+                                Powered by <a href="https://www.coderfoundry.com">CoderFoundry</a> &nbsp; &nbsp; &copy; Copyright 2017 CoderFoundry
+                            </p>
+                        </div>
+                    </div>
+                </footer>
+                <!--footer ends-->
+
+            </div>
+        </div>
+    </div>
+
+        <!--Newsletter modal-->
+        <div id="newsletterModal" class="modal fade" role="dialog" aria-hidden="true">
+            <div class="modal-dialog">
+                <div class="modal-content">
+                    <div class="modal-header">
+                        <div class="modal-title">
+                            <button type="button" class="close" data-dismiss="modal">
+                                <i class="fa fa-times" aria-hidden="true">&nbsp;&nbsp;</i>
+                            </button>
+                            <br />
+                            <p style="text-align:center; font-size:20px">NEWSLETTER</p>
+                            <p style="text-align:center">Join our mailing list to receive updates on new arrivals and special offers.</p>
+                        </div>
+                        <div class="modal-body">
+                            <input type="email" placeholder="Enter your email" style="width:100%" />
+                        </div>
+                        <div class="modal-footer">
+                            <button class="btn-danger" style="padding:3px 10px">Join mailing list</button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+
+        <!--Subscribe modal-->
+        <div id="subscribeModal" class="modal fade" role="dialog" aria-hidden="true">
+            <div class="modal-dialog">
+                <div class="modal-content">
+                    <div class="modal-header">
+                        <div class="modal-title">
+                            <button type="button" class="close" data-dismiss="modal">
+                                <i class="fa fa-times" aria-hidden="true">&nbsp;&nbsp;</i>
+                            </button>
+                            <br />
+                            <div style="background-color:black; margin-top:4px; border-radius:6px; border:1px solid black;  padding:20px 0px">
+                                <p style="text-align:center; font-size:20px; color:white">SUBSCRIBE</p>
+                                <p style="text-align:center; color:white">Please subscribe for <span style="color:red">VIP</span> treatment!</p>
+                            </div>
+                        </div>
+                        <div class="modal-body">
+                            <input type="email" placeholder="Enter your email" style="width:100%" />
+                        </div>
+                        <div class="modal-footer">
+                            <button class="btn-danger" style="padding:3px 10px">Subscribe</button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+
+        <!--Find store modal-->
+        <div id="findStoreModal" class="modal fade" role="dialog" aria-hidden="true">
+            <div class="modal-dialog">
+                <div class="modal-content">
+                    <div class="modal-header"><h4>Our custom showrooms always have the latest watch styles.</h4><p>Find a store near you </p></div>
+                    <div class="modal-body">
+                        <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d1139.813275862235!2d-80.07232087014435!3d36.0964427231706!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x0%3A0x64583b7d90957128!2sCoder+Foundry!5e0!3m2!1sen!2sus!4v1501457419556" width="567" height="450" frameborder="0" style="border:0" allowfullscreen=""></iframe>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+
+        <!--script(s)-->
+        <script>
+
+            // Display or hide navbar.
+            function navbarVisibility() {
+                var navbarStatus = document.getElementById("navbar");
+                if (navbarStatus.style.display === "none") {
+                    document.getElementById("navbar").style.display = "block";
+                } else {
+                    document.getElementById("navbar").style.display = "none";
+                }
+            }
+
+            // Close the navbar.
+            function closeNavbar() {
+                document.getElementById("navbar").style.display = "none";
+            }
+
+            // Display or hide Collection years.
+            function collectionVisibility() {
+                var collectionStatus = document.getElementById("collectionYears");
+                if (collectionStatus.style.display === "none") {
+                    document.getElementById("collectionYears").style.display = "block";
+                    document.getElementById("collectionArrow").setAttribute("class", "fa fa-caret-down");
+                } else {
+                    document.getElementById("collectionYears").style.display = "none";
+                    document.getElementById("collectionArrow").setAttribute("class", "fa fa-caret-right");
+                }
+            }
+
+        </script>
+
+
+
+        <script src="~/assets/scripts/jquery-1.9.1.js"></script>
+        <script src="~/assets/scripts/bootstrap.js"></script>
+
+
+        @*@Scripts.Render("~/bundles/jquery")
+        @Scripts.Render("~/bundles/bootstrap")*@
+
+        @RenderSection("scripts", required: false)
+
+
+</body>
+</html>

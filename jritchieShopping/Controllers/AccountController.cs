@@ -79,7 +79,7 @@ namespace jritchieShopping.Controllers
             switch (result)
             {
                 case SignInStatus.Success:
-                    return RedirectToLocal(returnUrl);
+                    return RedirectToLocal(returnUrl);      // Return user to page displayed before log-in page was displayed.
 
                 case SignInStatus.LockedOut:
                     return View("Lockout");

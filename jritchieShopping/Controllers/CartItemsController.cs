@@ -16,9 +16,13 @@ namespace jritchieShopping.Controllers
     public class CartItemsController : Universal
     {
         // GET: CartItems
+        [Authorize]                                 // Requires user be logged in; if not, redirects the user to the log-in page.
         public ActionResult Index()
         {
-            return View(db.CartItems.ToList());
+            var user = db.Users.Find(User.Identity.GetUserId());
+
+            return View(user.CartItems.ToList());   // Filters CartItems to show only the current user's items. 
+            //return View(db.CartItems.ToList());   // Shows all CartItems.
         }
 
         // GET: CartItems/Details/5
@@ -62,14 +66,14 @@ namespace jritchieShopping.Controllers
         // POST: CartItems/AddToCart/5
         [HttpPost]
         [ValidateAntiForgeryToken]
-        public ActionResult AddToCart(int? id)
+        public ActionResult AddToCart(int? id, int? quantity)
         {
-            var user = db.Users.Find(User.Identity.GetUserId());
-            if (user == null)
-            {
-                return RedirectToAction("Login", "Account");
-            }
+            //if (user == null)
+            //{
+            //    return RedirectToAction("Login", "Account");
+            //}
 
+            int increment = 1;
             if (id == null)
             {
                 return new HttpStatusCodeResult(HttpStatusCode.BadRequest);
@@ -81,14 +85,30 @@ namespace jritchieShopping.Controllers
                 return HttpNotFound();
             }
 
-            CartItem cartItem = new CartItem();
-            cartItem.ItemId = (int)id;
-            cartItem.CustomerId = user.Id;
-            cartItem.Count = 1;
-            cartItem.Created = DateTime.Now;
+            if (quantity != null)
+            {
+                increment = quantity.Value;
+            }
 
-            db.CartItems.Add(cartItem);
-            db.SaveChanges();
+            var user = db.Users.Find(User.Identity.GetUserId());
+            if (db.CartItems.Where(i => i.CustomerId == user.Id).Any(i => i.ItemId == id.Value))
+            {
+                var existingCartItem = db.CartItems.Where(i => i.CustomerId == user.Id).FirstOrDefault(i => i.ItemId == id.Value);
+                existingCartItem.Count += increment;
+                db.SaveChanges();
+                return Redirect(HttpContext.Request.UrlReferrer.AbsoluteUri);
+            }
+            else
+            {
+                CartItem cartItem = new CartItem();
+                cartItem.Count = increment;
+                cartItem.ItemId = id.Value;
+                cartItem.Created = DateTime.Now;
+                cartItem.CustomerId = user.Id;
+
+                db.CartItems.Add(cartItem);
+                db.SaveChanges();
+            }
             return RedirectToAction("Index");               // CartItem Index view.
         }
 
