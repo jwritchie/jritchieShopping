@@ -6,61 +6,59 @@
 
 <div class="subpageDisplay">
 
-    <h3 style="color:black; text-align:center">Items in your Cart</h3>
+    <div style="text-align:center; border-bottom:1px solid rgb(255,120,0)">
+        <h3>Items in your Cart</h3>
+    </div>
 
-    <p>
-        @*@Html.ActionLink("Create New", "Create")*@
-    </p>
-
-    <table class="table">
-        <tr>
-            <th>
-                Name
-            </th>
-            <th>
-                ID #
-            </th>
-            @*<th>
-                @Html.DisplayNameFor(model => model.ItemId)
-            </th>*@
-            @*<th>
-                @Html.DisplayNameFor(model => model.CustomerId)
-            </th>*@
-            <th>
-                @Html.DisplayNameFor(model => model.Count)
-            </th>
-            @*<th>
-                @Html.DisplayNameFor(model => model.Created)
-            </th>*@
-            <th></th>
-        </tr>
-
-        @foreach (var item in Model)
-        {
+        <table class="table center" style="border-bottom:1px solid rgb(255,120,0)">
             <tr>
-                <td>
-                    @Html.DisplayFor(modelItem => item.Item.Name)
-                </td>
-                <td>
-                    @Html.DisplayFor(modelItem => item.ItemId)
-                </td>
-                @*<td>
-                    @Html.DisplayFor(modelItem => item.CustomerId)
-                </td>*@
-                <td>
-                    @Html.DisplayFor(modelItem => item.Count)
-                </td>
-                @*<td>
-                    @Html.DisplayFor(modelItem => item.Created)
-                </td>*@
-                <td>
-                    @Html.ActionLink("Change Quantity", "Edit", new { id = item.Id }) |
-                    @Html.ActionLink("Details", "Details", new { id = item.Id }) |
-                    @Html.ActionLink("Delete", "Delete", new { id = item.Id })
-                </td>
+                <th>
+                    Name
+                </th>
+                <th>
+                    Details
+                </th>
+                <th>
+                    Unit Price
+                </th>
+                <th>
+                    Subtotal
+                </th>
+                <th></th>
             </tr>
-        }
 
-    </table>
+            @foreach (var item in Model)
+            {
+                <tr>
+                    <td>
+                        @Html.DisplayFor(modelItem => item.Item.Name)
+                    </td>
+                    <td>
+                        @Html.ActionLink("Details", "Details", new { id = item.Id }, htmlAttributes: new { style = "color:rgb(255,120,0); text-decoration:underline" })
+                    </td>
+                    <td>
+                        @Html.DisplayFor(modelItem => item.Count)
+                        <p>
+                            @Html.ActionLink("Update", "Edit", new { id = item.Id }, htmlAttributes: new { style = "color:rgb(255,120,0); text-decoration:underline" })
+                        </p>
+                    </td>
+                    <td>
+                        @Html.DisplayFor(modelItem => item.Item.Price)
+                    </td>
+                    <td>
+                        @Html.DisplayFor(modelItem => item.unitTotal)
+                    </td>
+                    <td>
+                        @Html.ActionLink("Delete", "Delete", new { id = item.Id }, htmlAttributes: new { style = "color:rgb(255,120,0); text-decoration:underline" })
+                    </td>
+                </tr>
+            }
 
-</div>
+        </table>
+
+        <p style="text-align:center; padding:0px 0px 10px 0px">
+            @Html.ActionLink("Continue shopping", "Index", "Items", null, new { style = "color:rgb(255,120,0); text-decoration:underline" })
+        </p>
+
+    </div>
+

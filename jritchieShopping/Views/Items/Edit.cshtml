@@ -6,37 +6,20 @@
 
 <div class="subpageDisplay">
 
-    <h2>Edit</h2>
-
+    <div style="text-align:center; border-bottom:1px solid rgb(255,120,0); margin-bottom:20px">
+        <h3>Edit selected item</h3>
+    </div>
 
     @using (Html.BeginForm("Edit", "Items", new { mediaURL = Model.MediaURL }, FormMethod.Post, new { enctype = "Multipart/form-data" } ))
     {
         @Html.AntiForgeryToken()
 
         <div class="form-horizontal" style="width:90%">
-            <h4>Item</h4>
-            <hr />
             @Html.ValidationSummary(true, "", new { @class = "text-danger" })
 
             @Html.HiddenFor(model => model.Id)                @*// Values are passed, but are in hidden fields.*@
             @Html.HiddenFor(model => model.CreateDate)
 
-
-            @*<div class="form-group">
-                @Html.LabelFor(model => model.CreateDate, htmlAttributes: new { @class = "control-label col-md-2" })
-                <div class="col-md-10">
-                    @Html.EditorFor(model => model.CreateDate, new { htmlAttributes = new { @class = "form-control" } })
-                    @Html.ValidationMessageFor(model => model.CreateDate, "", new { @class = "text-danger" })
-                </div>
-            </div>*@
-
-            @*<div class="form-group">
-                @Html.LabelFor(model => model.UpdatedDate, htmlAttributes: new { @class = "control-label col-md-2" })
-                <div class="col-md-10">
-                    @Html.EditorFor(model => model.UpdatedDate, new { htmlAttributes = new { @class = "form-control" } })
-                    @Html.ValidationMessageFor(model => model.UpdatedDate, "", new { @class = "text-danger" })
-                </div>
-            </div>*@
 
             <div class="form-group">
                 @Html.LabelFor(model => model.Name, htmlAttributes: new { @class = "control-label col-md-2" })
@@ -54,22 +37,15 @@
                 </div>
             </div>
 
-
-            @*<div class="form-group">
-                @Html.LabelFor(model => model.MediaURL, htmlAttributes: new { @class = "control-label col-md-2" })
-                <div class="col-md-10">
-                    @Html.EditorFor(model => model.MediaURL, new { htmlAttributes = new { @class = "form-control" } })
-                    @Html.ValidationMessageFor(model => model.MediaURL, "", new { @class = "text-danger" })
-                </div>
-            </div>*@
-
             <div class="form-group">
-                <label class="control-label col-md-2">Upload Image</label>
+                <label class="control-label col-md-2">Upload new image</label>
                 <div class="col-md-10">
-                    <input name="image" type="file" class="form-control" />
+                    <input name="image" type="file" class="form-control" value="@Model.MediaURL"/>
+                    <img src="@Url.Content(Model.MediaURL)" style="margin-top:2px; border:2px solid rgb(255,120,0); max-height:293px; width:auto" />
+                    <span style="font-weight:bold">Current image:</span>
+                    <span>@Html.DisplayFor(model => model.MediaURL)</span>
                 </div>
             </div>
-
 
             <div class="form-group">
                 @Html.LabelFor(model => model.Description, htmlAttributes: new { @class = "control-label col-md-2" })
@@ -86,16 +62,15 @@
 
             <div class="form-group">
                 <div class="col-md-offset-2 col-md-10">
-                    <input type="submit" value="Save" class="btn btn-default" />
+                    <input type="submit" value="Save edited item" class="btn btn-default" />
                 </div>
             </div>
         </div>
     }
 
-    <div>
-        @Html.ActionLink("Back to List", "Index")
+    <div style="text-align:center; padding:20px 0px 20px 0px; border-top:1px solid rgb(255,120,0);">
+        @Html.ActionLink("Return to items list", "Index", null, new { style = "color:rgb(255,120,0); text-decoration:underline" })
     </div>
-
 
 
     @section scripts{

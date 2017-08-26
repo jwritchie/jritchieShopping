@@ -128,37 +128,37 @@ namespace jritchieShopping.Controllers
                 /*** If the user leaves the image field empty... ***/
 
                 /* This version sets the image to the default image. */
-                var filePath = "/assets/Images/Uploads/";                       // MediaURL
-                var absPath = Server.MapPath("~" + filePath);                   // Physical file
+                //var filePath = "/assets/Images/Uploads/";                       // MediaURL
+                //var absPath = Server.MapPath("~" + filePath);                   // Physical file
 
-                if (image == null)
-                {
-                    item.MediaURL = "/assets/Images/DefaultImage.jpg";          // Set to default image if no image is specified
-                }
-                else
-                {
-                    item.MediaURL = filePath + image.FileName;                  // Sets path of file in database
-                    image.SaveAs(Path.Combine(absPath, image.FileName));        // Saves (adds) the physical file to the application
-                }
-
-
-                /* This version sets the image to the prior (current) image. */
-                //db.Entry(item).State = EntityState.Modified;
-                //if (image != null)
+                //if (image == null)
                 //{
-                //    var filePath = "/assets/Images/Uploads/";                 // MediaURL
-                //    var absPath = Server.MapPath("~" + filePath);             // Physical file
-                //    item.MediaURL = filePath + image.FileName;                // Sets path of file in database
-                //    image.SaveAs(Path.Combine(absPath, image.FileName));      // Saves (adds) the physical file to the application
+                //    item.MediaURL = "/assets/Images/DefaultImage.jpg";          // Set to default image if no image is specified
                 //}
                 //else
                 //{
-                //    item.MediaURL = mediaURL;                                 // Sets image to prior image. 
+                //    item.MediaURL = filePath + image.FileName;                  // Sets path of file in database
+                //    image.SaveAs(Path.Combine(absPath, image.FileName));        // Saves (adds) the physical file to the application
                 //}
+
+
+                /* This version sets the image to the prior (current) image. */
+                db.Entry(item).State = EntityState.Modified;
+                if (image != null)
+                {
+                    var filePath = "/assets/Images/Uploads/";                 // MediaURL
+                    var absPath = Server.MapPath("~" + filePath);             // Physical file
+                    item.MediaURL = filePath + image.FileName;                // Sets path of file in database
+                    image.SaveAs(Path.Combine(absPath, image.FileName));      // Saves (adds) the physical file to the application
+                }
+                else
+                {
+                    item.MediaURL = mediaURL;                                 // Sets image to prior image. 
+                }
 
                 item.UpdatedDate = System.DateTime.Now;
                 
-                //db.Entry(item).State = EntityState.Modified;
+                db.Entry(item).State = EntityState.Modified;
                 db.SaveChanges();
                 return RedirectToAction("Index");
             }

@@ -20,31 +20,24 @@
                 {
 
                     <div class=" col-md-4">
-                        <dl class="dl-horizontal">
-                            <dt>
-                                @Html.DisplayNameFor(model => model.CreateDate)
-                            </dt>
-
-                            <dd>
-                                @Html.DisplayFor(model => model.CreateDate)
-                            </dd>
-
-                            <dt>
-                                @Html.DisplayNameFor(model => model.UpdatedDate)
-                            </dt>
-
-                            <dd>
+                        <h5 style="font-weight:bold">Record created</h5>
+                        @Html.DisplayFor(model => model.CreateDate)
+                        <br />
+                        <h5 style="font-weight:bold">Record updated</h5>
+                        @{ 
+                            var recordUpdated = Model.UpdatedDate;
+                            if (recordUpdated == null)
+                            {
+                                <p>-</p>
+                            }
+                            else
+                            {
                                 @Html.DisplayFor(model => model.UpdatedDate)
-                            </dd>
-
-                            <dt>
-                                @Html.DisplayNameFor(model => model.MediaURL)
-                            </dt>
-
-                            <dd>
-                                @Html.DisplayFor(model => model.MediaURL)
-                            </dd>
-                        </dl>
+                            }
+                        }
+                        <br />
+                        <h5 style="font-weight:bold">Media URL</h5>
+                        @Html.DisplayFor(model => model.MediaURL)
                     </div>
 
                     <div class=" col-md-4">
@@ -58,7 +51,6 @@
 
                     <div class=" col-md-4">
                         <img src="@Model.MediaURL" style="display: block; margin: auto; border:2px solid rgb(255,120,0); max-height:293px; width:auto" />
-                        @*<img class="img-responsive" src="@Model.MediaURL" style="display: block; margin: auto; border:2px solid rgb(255,120,0)" />*@
                     </div>
                 }
                 else
@@ -74,7 +66,6 @@
 
                     <div class=" col-md-6">
                         <img src="@Model.MediaURL" style="display: block; margin: auto; border:2px solid rgb(255,120,0); max-height:293px; width:auto" />
-@*                        <img class="img-responsive" src="@Model.MediaURL" style="display: block; margin: auto; border:2px solid rgb(255,120,0)" />*@
                     </div>
                 }
             }

@@ -32,7 +32,15 @@ namespace jritchieShopping.Models
 
                 // Ryan's code for total cart items using LINQ.
                 //ViewBag.TotalCartItems = user.CartItems.Sum(c => c.Count);
+
+                if (ViewBag.CartItems.Count != 0)
+                { 
                 ViewBag.TotalCartItems = db.CartItems.AsNoTracking().Where(c => c.CustomerId == user.Id).Sum(c => c.Count);
+                }
+                else
+                {
+                    ViewBag.TotalCartItems = 0;
+                }
 
                 // My foreach code for total cart items.
                 //int totalCount = 0;
