@@ -10,53 +10,84 @@
         <h3>Items in your Cart</h3>
     </div>
 
-        <table class="table center" style="border-bottom:1px solid rgb(255,120,0)">
-            <tr>
-                <th>
-                    Name
-                </th>
-                <th>
-                    Details
-                </th>
-                <th>
-                    Unit Price
-                </th>
-                <th>
-                    Subtotal
-                </th>
-                <th></th>
-            </tr>
+    <table class="table" style="width:70%; margin: 0px auto">
+        <tr>
+            <th style="width:5%">
+                Item
+            </th>
+            <th style="width:20%">
+            </th>
+            <th style="width:5%">
+            </th>
+            <th style="text-align:right; width:15%">
+                Quantity
+            </th>
+            <th style="text-align:right; width:20%">
+                Unit Price
+            </th>
+            <th style="text-align:right; width:20%">
+                Subtotal
+            </th>
+            <th style="text-align:right; width:15%"></th>
+        </tr>
 
-            @foreach (var item in Model)
+        @{ 
+            decimal cartTotal = 0;
+
+            foreach (var item in Model)
             {
-                <tr>
-                    <td>
-                        @Html.DisplayFor(modelItem => item.Item.Name)
-                    </td>
-                    <td>
-                        @Html.ActionLink("Details", "Details", new { id = item.Id }, htmlAttributes: new { style = "color:rgb(255,120,0); text-decoration:underline" })
-                    </td>
-                    <td>
-                        @Html.DisplayFor(modelItem => item.Count)
-                        <p>
-                            @Html.ActionLink("Update", "Edit", new { id = item.Id }, htmlAttributes: new { style = "color:rgb(255,120,0); text-decoration:underline" })
-                        </p>
-                    </td>
-                    <td>
-                        @Html.DisplayFor(modelItem => item.Item.Price)
-                    </td>
-                    <td>
-                        @Html.DisplayFor(modelItem => item.unitTotal)
-                    </td>
-                    <td>
-                        @Html.ActionLink("Delete", "Delete", new { id = item.Id }, htmlAttributes: new { style = "color:rgb(255,120,0); text-decoration:underline" })
-                    </td>
-                </tr>
+            <tr>
+                <td>
+                    <img src="@item.Item.MediaURL" style="height:50px; width:auto" />
+                </td>
+                <td>
+                    @Html.DisplayFor(modelItem => item.Item.Name)
+                </td>
+                <td>
+                    @Html.ActionLink("Details", "Details", new { id = item.Id }, htmlAttributes: new { style = "color:rgb(255,120,0); text-decoration:underline" })
+                </td>
+                <td style="text-align:right">
+                    @Html.DisplayFor(modelItem => item.Count)
+                    <p>
+                        @Html.ActionLink("Update", "Edit", new { id = item.Id }, htmlAttributes: new { style = "color:rgb(255,120,0); text-decoration:underline" })
+                    </p>
+                </td>
+                <td style="text-align:right">
+                    @{cartTotal += @item.unitTotal;}
+                    $
+                    @item.Item.Price.ToString("N2")
+                    @*@Html.DisplayFor(modelItem => item.Item.Price).ToString("N2")*@
+                </td>
+                <td style="text-align:right">
+                    $
+                    @item.unitTotal.ToString("N2")
+                    @*@Html.DisplayFor(modelItem => item.unitTotal).ToString("N2")*@
+                </td>
+                <td style="text-align:right">
+                    @Html.ActionLink("Delete", "Delete", new { id = item.Id }, htmlAttributes: new { style = "color:rgb(255,120,0); text-decoration:underline" })
+                </td>
+            </tr>
             }
+        }
 
-        </table>
+        <tr>
+            <td></td>
+            <td></td>
+            <td></td>
+            <td></td>
+            <td style="text-align:right; font-weight:bold">
+                Total
+            </td>
+            <td style="text-align:right">
+                $
+                @cartTotal.ToString("N2")
+            </td>
+            <td></td>
+        </tr>
 
-        <p style="text-align:center; padding:0px 0px 10px 0px">
+    </table>
+
+        <p style="text-align:center; padding:20px 0px 10px 0px; border-top: 1px solid rgb(255,120,0)">
             @Html.ActionLink("Continue shopping", "Index", "Items", null, new { style = "color:rgb(255,120,0); text-decoration:underline" })
         </p>
 

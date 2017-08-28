@@ -25,15 +25,16 @@
     {
         if (!Request.IsAuthenticated)    // Invite non-logged-in users to Register or Log-in.
         {
-
-        <div style="position:absolute; left:50%; transform: translate(-50%, 0%); text-align:center; background-color:black; color:white; padding: 0px 20px 10px 20px">
-            <h3>To shop with us, 
-            <span>@Html.ActionLink("Register", "Register", "Account", routeValues: null, htmlAttributes: new { id = "registerLink", style = "color:rgb(255,120,0)" })</span>
-            <span> or </span>
-            <span>@Html.ActionLink("Log-in", "Login", "Account", routeValues: new { returnUrl = Request.Url.AbsolutePath }, htmlAttributes: new { id = "loginLink", style = "color:rgb(255,120,0)" })</span>
-            </h3>
-        </div>
-        <div style="margin-bottom:100px"></div>
+            <div class="row">
+                <div class="col-md-12 text-center" style="margin-top:-10px">
+                    <h3>
+                        To shop with us,
+                        <span>@Html.ActionLink("Register", "Register", "Account", routeValues: null, htmlAttributes: new { id = "registerLink", style = "color:rgb(255,120,0)" })</span>
+                        <span> or </span>
+                        <span>@Html.ActionLink("Log-in", "Login", "Account", routeValues: new { returnUrl = Request.Url.AbsolutePath }, htmlAttributes: new { id = "loginLink", style = "color:rgb(255,120,0)" })</span>
+                    </h3>
+                </div>
+            </div>
         }
     }
 
@@ -66,16 +67,16 @@
                     </p>
 
                     @{if (Request.IsAuthenticated)    // Confirm user is logged in.
-                        {
+                      {
                         <div>
                             @using (Html.BeginForm("AddToCart", "CartItems", new { id = item.Id }, FormMethod.Post, null))
-                                {
+                             {
                                 @Html.AntiForgeryToken()
                                 <input type="submit" value="Add to cart" class="btn btn-default" style="background-color:rgb(255,120,0); position:absolute; top:80%; left:50%; transform: translate(-50%, -80%)" />
-                                }
+                             }
                         </div>
-                        }
-                        }
+                      }
+                     }
                                   
                 </div>
             </div>

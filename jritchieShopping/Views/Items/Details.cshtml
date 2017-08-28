@@ -19,7 +19,7 @@
                 if (User.IsInRole("Admin"))
                 {
 
-                    <div class=" col-md-4">
+                    <div class=" col-md-3 col-md-offset-1">
                         <h5 style="font-weight:bold">Record created</h5>
                         @Html.DisplayFor(model => model.CreateDate)
                         <br />
@@ -49,13 +49,14 @@
                         </div>
                     </div>
 
-                    <div class=" col-md-4">
-                        <img src="@Model.MediaURL" style="display: block; margin: auto; border:2px solid rgb(255,120,0); max-height:293px; width:auto" />
+                    <div class=" col-md-4 text-center">
+                        <img data-toggle="modal" data-target="#imageModal" src="@Model.MediaURL" style="display: block; margin: auto; border:2px solid rgb(255,120,0); max-height:293px; width:auto" />
+                        <p>Click to enlarge</p>
                     </div>
                 }
                 else
                 {
-                    <div class=" col-md-6">
+                    <div class=" col-md-4 col-md-offset-2">
                         <div style="margin-left:60px">
                             <h4 style="font-weight:bold">Description</h4>
                         </div>
@@ -64,12 +65,26 @@
                         </div>
                     </div>
 
-                    <div class=" col-md-6">
-                        <img src="@Model.MediaURL" style="display: block; margin: auto; border:2px solid rgb(255,120,0); max-height:293px; width:auto" />
+                    <div class="col-md-4 text-center">
+                        <img data-toggle="modal" data-target="#imageModal" src="@Model.MediaURL" style="display:block; margin:auto; border:2px solid rgb(255,120,0); max-height:293px; width:auto" />
+                        <p>Click to enlarge</p>
                     </div>
                 }
             }
         </div>
+
+        @{if (Request.IsAuthenticated)    // Confirm user is logged in.
+          {
+            <div class="col-md-12 text-center" style="margin-top:10px">
+                @using (Html.BeginForm("AddToCart", "CartItems", new { id = Model.Id }, FormMethod.Post, null))
+                 {
+                    @Html.AntiForgeryToken()
+                    <input type="submit" value="Add to cart" class="btn btn-default" style="background-color:rgb(255,120,0)" />
+                 }
+            </div>
+          }
+        }
+
     </div>
 
 
@@ -92,4 +107,23 @@
             }
         }
 
+</div>
+
+
+<!-- Modal -->
+<div id="imageModal" class="modal fade" role="dialog">
+    <div class="modal-dialog modal-lg">
+
+        <!-- Modal content-->
+        <div class="modal-content" style="border:2px solid rgb(255,120,0)">
+            <div class="modal-header">
+                <button type="button" class="close" data-dismiss="modal">&times;</button>
+                <h4 class="modal-title">@Model.Name</h4>
+            </div>
+            <div class="modal-body">
+                <img class="img-responsive" src="@Model.MediaURL"/>
+            </div>
+        </div>
+
+    </div>
 </div>
