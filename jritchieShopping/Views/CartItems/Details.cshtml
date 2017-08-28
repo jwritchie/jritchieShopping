@@ -4,47 +4,36 @@
     ViewBag.Title = "Details";
 }
 
-<h2>Details</h2>
+<div class="subpageDisplay">
 
-<div>
-    <h4>CartItem</h4>
-    <hr />
-    <dl class="dl-horizontal">
-        <dt>
-            @Html.DisplayNameFor(model => model.ItemId)
-        </dt>
+    <div style="text-align:center; border-bottom:1px solid rgb(255,120,0); margin-bottom:20px">
+        <h3>Cart item: @Model.Item.Name</h3>
+        <h4 style="font-weight:bold">$@Model.Item.Price.ToString("N2")</h4>
+    </div>
 
-        <dd>
-            @Html.DisplayFor(model => model.ItemId)
-        </dd>
+    <div class="container-fluid" style="margin-top:20px; padding-bottom:20px; border-bottom:1px solid rgb(255,120,0)">
+        <div class=" row">
 
-        <dt>
-            @Html.DisplayNameFor(model => model.CustomerId)
-        </dt>
+            <div class=" col-md-4 col-md-offset-2">
+                <div style="margin-left:60px">
+                    <h4 style="font-weight:bold">Description</h4>
+                </div>
+                <div style="margin-left:60px">
+                    @Html.Raw(Model.Item.Description)
+                </div>
+            </div>
 
-        <dd>
-            @Html.DisplayFor(model => model.CustomerId)
-        </dd>
+            <div class="col-md-4 text-center">
+                <img src="@Model.Item.MediaURL" style="display:block; margin:auto; border:2px solid rgb(255,120,0); max-height:293px; width:auto" />
+            </div>
 
-        <dt>
-            @Html.DisplayNameFor(model => model.Count)
-        </dt>
+        </div>
+    </div>
 
-        <dd>
-            @Html.DisplayFor(model => model.Count)
-        </dd>
+    <p>
+    </p>
+    <p style="text-align:center; padding:20px 0px 10px 0px">
+        @Html.ActionLink("Back to Cart", "Index", "CartItems", null, new { style = "color:rgb(255,120,0); text-decoration:underline" })
+    </p>
 
-        <dt>
-            @Html.DisplayNameFor(model => model.Created)
-        </dt>
-
-        <dd>
-            @Html.DisplayFor(model => model.Created)
-        </dd>
-
-    </dl>
 </div>
-<p>
-    @Html.ActionLink("Edit", "Edit", new { id = Model.Id }) |
-    @Html.ActionLink("Back to List", "Index")
-</p>

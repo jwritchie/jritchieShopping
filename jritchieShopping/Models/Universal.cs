@@ -35,11 +35,13 @@ namespace jritchieShopping.Models
 
                 if (ViewBag.CartItems.Count != 0)
                 { 
-                ViewBag.TotalCartItems = db.CartItems.AsNoTracking().Where(c => c.CustomerId == user.Id).Sum(c => c.Count);
+                    ViewBag.TotalCartItems = db.CartItems.AsNoTracking().Where(c => c.CustomerId == user.Id).Sum(c => c.Count);
+                    ViewBag.CartTotal = db.CartItems.AsNoTracking().Where(c => c.CustomerId == user.Id).Sum(c => c.Item.Price * c.Count);
                 }
                 else
                 {
                     ViewBag.TotalCartItems = 0;
+                    ViewBag.CartTotal = 0;
                 }
 
                 // My foreach code for total cart items.

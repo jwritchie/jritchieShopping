@@ -8,6 +8,7 @@ using System.Web;
 using System.Web.Mvc;
 using jritchieShopping.Models;
 using jritchieShopping.Models.CodeFirst;
+using Microsoft.AspNet.Identity;
 
 namespace jritchieShopping.Controllers
 {
@@ -46,16 +47,63 @@ namespace jritchieShopping.Controllers
         // more details see https://go.microsoft.com/fwlink/?LinkId=317598.
         [HttpPost]
         [ValidateAntiForgeryToken]
-        public ActionResult Create([Bind(Include = "Id,Address,City,State,ZipCode,Country,Phone,Total,OrderDate,CustomerId")] Order order)
+        public ActionResult Create([Bind(Include = "Id,Address,City,State,ZipCode,Country,Phone")] Order order)
         {
+            order.Total = ViewBag.CartTotal;
+            order.OrderDate = DateTime.Today;
+
+            var userId = User.Identity.GetUserId();
+            order.CustomerId = userId;
+
+            var cartItems = db.CartItems.Where(c => c.CustomerId == userId).ToList();
+
+
+
             if (ModelState.IsValid)
             {
+                // Add Order to Orders table.
                 db.Orders.Add(order);
                 db.SaveChanges();
+
+                // Add OrderItem to OrderItems table.
+                foreach (var cartItem in cartItems)
+                {
+                    OrderItem orderItem = new OrderItem();
+                    orderItem.OrderId = order.Id;
+                    orderItem.ItemId = cartItem.ItemId;
+                    orderItem.Quantity = cartItem.Count;
+                    orderItem.UnitPrice = cartItem.Item.Price;
+
+                    db.OrderItems.Add(orderItem);
+                    db.SaveChanges();
+                }
+
                 return RedirectToAction("Index");
             }
 
             return View(order);
+
+            // public class OrderItem
+            //       {
+
+            //            public int Id { get; set; }             // Primary key      
+            //            public int OrderId { get; set; }        // Foreign key
+            //            public int ItemId { get; set; }         // Foreign key
+            //            public int Quantity { get; set; }
+            //            public decimal UnitPrice { get; set; }
+
+
+            //********************************************************
+
+            // public class CartItem
+            //            {
+
+            //                public int Id { get; set; }                 // Primary key
+            //                public int ItemId { get; set; }             // Foreign key
+            //                public string CustomerId { get; set; }      // Foreign key      guid = global unique identifier (string)
+            //                public int Count { get; set; }
+            //                public DateTime Created { get; set; }
+
         }
 
         // GET: Orders/Edit/5
