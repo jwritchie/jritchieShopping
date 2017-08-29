@@ -8,7 +8,6 @@
 
     <div style="text-align:center; border-bottom:1px solid rgb(255,120,0)">
         <h3>Items in @ViewBag.FullName's Cart</h3>
-        @*<h5>Total: @ViewBag.CartTotal</h5>*@
     </div>
 
 
@@ -16,7 +15,7 @@
         if (ViewBag.TotalCartItems == 0)
         {
             <h2 style="text-align:center" >Your cart is empty.</h2>
-            <h3 style="text-align:center; margin-bottom:30px" >@Html.ActionLink("Go shopping!", "Index", "Items", null, new { style = "color:rgb(255,120,0); text-decoration:underline" })</h3>
+            <h3 style="text-align:center; margin-bottom:30px" >@Html.ActionLink("Let's go shopping!", "Index", "Items", null, new { style = "color:rgb(255,120,0); text-decoration:underline" })</h3>
         }
         else
         {
@@ -42,8 +41,6 @@
                 </tr>
 
                 @{ 
-                    decimal cartTotal = 0;
-
                     foreach (var item in Model)
                     {
                     <tr>
@@ -63,15 +60,12 @@
                             </p>
                         </td>
                         <td style="text-align:right">
-                            @{cartTotal += @item.unitTotal;}
                             $
                             @item.Item.Price.ToString("N2")
-                            @*@Html.DisplayFor(modelItem => item.Item.Price).ToString("N2")*@
                         </td>
                         <td style="text-align:right">
                             $
                             @item.unitTotal.ToString("N2")
-                            @*@Html.DisplayFor(modelItem => item.unitTotal).ToString("N2")*@
                         </td>
                         <td style="text-align:right">
                             @Html.ActionLink("Delete", "Delete", new { id = item.Id }, htmlAttributes: new { style = "color:rgb(255,120,0); text-decoration:underline" })
@@ -91,7 +85,6 @@
                     <td style="text-align:right">
                         $
                         @ViewBag.CartTotal.ToString("N2")
-                        @*@cartTotal.ToString("N2")*@
                     </td>
                     <td></td>
                 </tr>

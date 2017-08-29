@@ -20,7 +20,11 @@ namespace jritchieShopping.Models.CodeFirst {
         [Required]
         public string Country { get; set; }
         [Required]
-        public string Phone { get; set; }   
+        public string Phone { get; set; }
+        [Required]
+        public string Name { get; set; }
+        [Required]
+        public string Email { get; set; }
         public decimal Total { get; set; }  
         public DateTime OrderDate { get; set; } 
         public string CustomerId { get; set; }

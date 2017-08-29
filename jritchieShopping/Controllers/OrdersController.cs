@@ -36,18 +36,33 @@ namespace jritchieShopping.Controllers
             return View(order);
         }
 
+
         // GET: Orders/Create
         public ActionResult Create()
         {
-            return View();
+            // Set default values for Name and Email properties.
+            var model = new Order
+            {
+                Name = ViewBag.Fullname,
+                Email = User.Identity.Name
+            };
+
+            return View(model);
         }
+
+        //// GET: Orders/Create
+        //public ActionResult Create()
+        //{
+        //    return View();
+        //}
+
 
         // POST: Orders/Create
         // To protect from overposting attacks, please enable the specific properties you want to bind to, for 
         // more details see https://go.microsoft.com/fwlink/?LinkId=317598.
         [HttpPost]
         [ValidateAntiForgeryToken]
-        public ActionResult Create([Bind(Include = "Id,Address,City,State,ZipCode,Country,Phone")] Order order)
+        public ActionResult Create([Bind(Include = "Id,Address,City,State,ZipCode,Country,Phone,Name,Email")] Order order)
         {
             order.Total = ViewBag.CartTotal;
             order.OrderDate = DateTime.Now;
