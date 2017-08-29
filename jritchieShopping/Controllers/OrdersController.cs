@@ -50,7 +50,7 @@ namespace jritchieShopping.Controllers
         public ActionResult Create([Bind(Include = "Id,Address,City,State,ZipCode,Country,Phone")] Order order)
         {
             order.Total = ViewBag.CartTotal;
-            order.OrderDate = DateTime.Today;
+            order.OrderDate = DateTime.Now;
 
             var userId = User.Identity.GetUserId();
             order.CustomerId = userId;
@@ -75,10 +75,11 @@ namespace jritchieShopping.Controllers
                     orderItem.UnitPrice = cartItem.Item.Price;
 
                     db.OrderItems.Add(orderItem);
+                    db.CartItems.Remove(cartItem);
                     db.SaveChanges();
                 }
 
-                return RedirectToAction("Index");
+                return RedirectToAction("Details", order);
             }
 
             return View(order);
