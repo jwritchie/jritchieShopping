@@ -194,13 +194,13 @@ namespace jritchieShopping.Controllers
                 return HttpNotFound();
             }
 
-            // Delete each OrderItem from OrderItems table.
-            var orderItems = db.OrderItems.Where(o => o.OrderId == order.Id).ToList();
-            foreach (var orderItem in orderItems)
-            {
-                db.OrderItems.Remove(orderItem);
-                db.SaveChanges();
-            }
+            //// Delete each OrderItem from OrderItems table.
+            //var orderItems = db.OrderItems.Where(o => o.OrderId == order.Id).ToList();
+            //foreach (var orderItem in orderItems)
+            //{
+            //    db.OrderItems.Remove(orderItem);
+            //    db.SaveChanges();
+            //}
 
             // Delete the Order from the Orders table.
             db.Orders.Remove(order);

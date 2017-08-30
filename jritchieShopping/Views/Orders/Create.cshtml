@@ -72,9 +72,9 @@
                 </div>
             </div>
 
-            <div class="form-group">
-                <div class="control-label col-md-9 col-md-offset-1" style="font-weight:bold; color:rgb(255,120,0); margin-top:10px; border-top:1px dashed rgb(255,120,0)"></div>
+                <div style="font-weight:bold; color:rgb(255,120,0); margin-top:10px; border-top:1px dashed rgb(255,120,0)"></div>
                 <div class="control-label col-md-2 col-md-offset-1" style="font-weight:bold; color:rgb(255,120,0)">Contact information:</div>
+            <div class="form-group">
             </div>
 
                 <div class="form-group">
@@ -126,15 +126,17 @@
                 </div>*@
 
 
-            <div class="form-actions no-color">
-                <div class="row">
-                    <div class="col-md-12 text-center" style="padding:20px 0px 20px 0px; border-top: 1px solid rgb(255,120,0)">
+            <div style="padding:20px 0px 20px 0px; border-top: 1px solid rgb(255,120,0)">
 
-                        <input type="submit" value="Submit and Continue" class="btn btn-default" style="background-color:rgb(255,120,0)" />
-                        <span>|</span>
-                        @Html.ActionLink("Return to Cart", "Index", "CartItems", null, new { style = "color:rgb(255,120,0); text-decoration:underline" })
-                        <span>|</span>
-                        @Html.ActionLink("Continue Shopping", "Index", "Items", null, new { style = "color:rgb(255,120,0); text-decoration:underline" })
+                <div class="row">
+                    <div class="col-md-12 text-center">
+                        <div class="form-actions no-color">
+                            <input type="submit" value="Submit and Continue" class="btn btn-default" style="background-color:rgb(255,120,0)" />
+                            <span>|</span>
+                            @Html.ActionLink("Return to Cart", "Index", "CartItems", null, new { style = "color:rgb(255,120,0); text-decoration:underline" })
+                            <span>|</span>
+                            @Html.ActionLink("Continue Shopping", "Index", "Items", null, new { style = "color:rgb(255,120,0); text-decoration:underline" })
+                        </div>
                     </div>
                 </div>
             </div>
