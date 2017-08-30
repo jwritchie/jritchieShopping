@@ -1,0 +1,48 @@
+﻿@model jritchieShopping.Models.CodeFirst.Order
+
+@{
+    ViewBag.Title = "Submit";
+}
+
+
+<div class="subpageDisplay">
+
+    <div style="text-align:center; border-bottom:1px solid rgb(255,120,0); margin-bottom:20px">
+        <h3>Order Submitted</h3>
+    </div>
+
+    <div class="container-fluid">
+
+        <div style="text-align:center">
+            <br />
+            <p>Thank you for your order.</p>
+
+            <!-- Section Divider -->
+            <div class="row">
+                <div class="col-md-offset-3" style="border:1px solid rgba(255,120,0,.5); width:50%; margin-top:20px; margin-bottom:40px">
+                </div>
+            </div>
+
+            <p>Your order will be shipped within 3-5 business days.</p>
+            <p>A Receipt/Confirmation will be sent to you at: <span style="color:rgb(255,120,0)">@Model.Customer.Email</span>.</p>
+            <p>The confirmation will contain the shipping information you'll need to track your order.</p>
+
+            <!-- Section Divider -->
+            <div class="row">
+                <div class="col-md-offset-3" style="border:1px solid rgba(255,120,0,.5); width:50%; margin-top:20px; margin-bottom:40px">
+                </div>
+            </div>
+
+            <p>If you have any questions about your order, please don't hesitate to contact us.</p>
+            <p>We look forward to assisting you in the future.</p>
+            <br />
+        </div>
+
+        <div class="row">
+            <div class="col-md-12 text-center" style="margin-top:10px; padding:20px 0px 20px 0px; border-top: 1px solid rgb(255,120,0)">
+                <a class="btn btn-default" href="@Url.Action("Index", "Home")">Continue shopping</a>
+            </div>
+        </div>
+
+    </div>
+</div>

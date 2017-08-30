@@ -122,11 +122,10 @@
                         </td>
                         <td style="text-align:right">
                             $
-                            @item.Item.Price.ToString("N2")
+                            @item.UnitPrice.ToString("N2")
                         </td>
                         <td style="text-align:right">
-                            $
-                            @item.UnitPrice.ToString("N2")
+                            $@item.Subtotal.ToString("N2")
                         </td>
                     </tr>
                 }
@@ -155,7 +154,7 @@
                     @Html.AntiForgeryToken()
 
                     <div class="form-actions no-color">
-                        <a class="btn btn-default" href="@Url.Action("Create", "Orders")" style="background-color:rgb(255,120,0)">Submit Order</a>
+                        <a class="btn btn-default" href="@Url.Action("Submit", "Orders", new { id = @Model.Id })" style="background-color:rgb(255,120,0)">Submit Order</a>
                         @*<input type="submit" value="Check out" class="btn btn-default" style="background-color:rgb(255,120,0)"/>*@
                         @*@Html.ActionLink("Check out", "Create", "Orders", null, new { style = "color:rgb(255,120,0); text-decoration:underline" })*@
                         <span>|</span>
@@ -174,7 +173,7 @@
 
 
 <!--
-        // Confirm order
+        // Submit order
         // Continue shopping:   return items to the cart
         // Cancel order:        delete Order / delete OrderItems 
 -->

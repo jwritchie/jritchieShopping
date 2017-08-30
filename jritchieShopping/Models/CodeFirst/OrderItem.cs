@@ -16,5 +16,13 @@ namespace jritchieShopping.Models.CodeFirst {
         // Virtual properties.
         public virtual Item Item { get; set; }      // Allows access to all properties of another object, does not get added to the database.
         public virtual Order Order { get; set; }
+
+        public decimal Subtotal
+        {
+            get
+            {
+                return Quantity * UnitPrice;
+            }
+        }
     }
 }

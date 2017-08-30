@@ -18,6 +18,7 @@
     <IISExpressUseClassicPipelineMode />
     <UseGlobalApplicationHostFile />
     <NameOfLastUsedPublishProfile>jritchie-shopping - Web Deploy</NameOfLastUsedPublishProfile>
+    <WebStackScaffolding_ViewDialogWidth>600</WebStackScaffolding_ViewDialogWidth>
   </PropertyGroup>
   <ProjectExtensions>
     <VisualStudio>

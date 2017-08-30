@@ -33,6 +33,7 @@ namespace jritchieShopping.Controllers
             {
                 return HttpNotFound();
             }
+
             return View(order);
         }
 
@@ -178,6 +179,32 @@ namespace jritchieShopping.Controllers
             db.SaveChanges();
             return RedirectToAction("Index");
         }
+
+
+        // GET: Orders/Submit
+        public ActionResult Submit(int? id)
+        {
+            if (id == null)
+            {
+                return new HttpStatusCodeResult(HttpStatusCode.BadRequest);
+            }
+            Order order = db.Orders.Find(id);
+            if (order == null)
+            {
+                return HttpNotFound();
+            }
+
+            if (ModelState.IsValid)
+            {
+                order.Submitted = true;
+
+                db.Entry(order).State = EntityState.Modified;
+                db.SaveChanges();
+                return View(order);
+            }
+            return View(order);
+        }
+
 
         protected override void Dispose(bool disposing)
         {

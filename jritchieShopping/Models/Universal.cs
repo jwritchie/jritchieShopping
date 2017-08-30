@@ -44,15 +44,7 @@ namespace jritchieShopping.Models
                     ViewBag.CartTotal = 0;
                 }
 
-                // My foreach code for total cart items.
-                //int totalCount = 0;
-                //foreach (var cartItem in user.CartItems)
-                //{
-                //    totalCount += cartItem.Count;
-                //}
-                //ViewBag.CartItemsTotalCount = totalCount;
-
-
+                
 
 
                 /***  Below code is from Ryan's project ***/
