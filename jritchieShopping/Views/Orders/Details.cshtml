@@ -161,7 +161,7 @@
                         <a class="btn btn-default" href="@Url.Action("Index", "Items")">Continue shopping</a>
                         @*@Html.ActionLink("Continue shopping", "Index", "Items", null, new { style = "color:rgb(255,120,0); text-decoration:underline" })*@
                         <span>|</span>
-                        <a class="btn btn-default" href="@Url.Action("Index", "Home")">Cancel Order</a>
+                        <a class="btn btn-default" href="@Url.Action("Delete", "Orders", new { id = Model.Id})">Cancel Order</a>
                         @*@Html.ActionLink("Cancel order", "Index", "Items", null, new { style = "color:rgb(255,120,0); text-decoration:underline" })*@
                     </div>
                 }
