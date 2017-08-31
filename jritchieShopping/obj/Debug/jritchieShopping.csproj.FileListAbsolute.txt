@@ -91,7 +91,6 @@ C:\Users\J\Documents\Visual Studio 2017\Projects\jritchieShopping\jritchieShoppi
 C:\Users\J\Documents\Visual Studio 2017\Projects\jritchieShopping\jritchieShopping\bin\Microsoft.AI.ServerTelemetryChannel.xml
 C:\Users\J\Documents\Visual Studio 2017\Projects\jritchieShopping\jritchieShopping\bin\Microsoft.AI.WindowsServer.xml
 C:\Users\J\Documents\Visual Studio 2017\Projects\jritchieShopping\jritchieShopping\bin\Microsoft.AI.Web.xml
-C:\Users\J\Documents\Visual Studio 2017\Projects\jritchieShopping\jritchieShopping\obj\Debug\jritchieShopping.csprojResolveAssemblyReference.cache
 C:\Users\J\Documents\Visual Studio 2017\Projects\jritchieShopping\jritchieShopping\obj\Debug\jritchieShopping.csproj.CoreCompileInputs.cache
 C:\Users\J\Documents\Visual Studio 2017\Projects\jritchieShopping\jritchieShopping\obj\Debug\jritchieShopping.dll
 C:\Users\J\Documents\Visual Studio 2017\Projects\jritchieShopping\jritchieShopping\obj\Debug\jritchieShopping.pdb
@@ -192,3 +191,5 @@ C:\Users\J\Desktop\New folder\jritchieShopping\jritchieShopping\obj\Debug\jritch
 C:\Users\J\Desktop\New folder\jritchieShopping\jritchieShopping\obj\Debug\jritchieShopping.csproj.CoreCompileInputs.cache
 C:\Users\J\Desktop\New folder\jritchieShopping\jritchieShopping\obj\Debug\jritchieShopping.dll
 C:\Users\J\Desktop\New folder\jritchieShopping\jritchieShopping\obj\Debug\jritchieShopping.pdb
+C:\Users\J\Documents\Visual Studio 2017\Projects\jritchieShopping\jritchieShopping\bin\assets\Images\DefaultImage.jpg
+C:\Users\J\Documents\Visual Studio 2017\Projects\jritchieShopping\jritchieShopping\obj\Debug\jritchieShopping.csprojResolveAssemblyReference.cache

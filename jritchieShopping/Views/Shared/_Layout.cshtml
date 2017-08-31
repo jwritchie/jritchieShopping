@@ -30,13 +30,16 @@
             </div>
             <div class="collapse navbar-collapse" id="cartNavbar">
                 <ul class="nav navbar-nav">
-                    @*<li class="dropdown">
-                        <a class="dropdown-toggle" data-toggle="dropdown">Series<span class="caret"></span></a>
+                    <li class="dropdown">
+                        <a class="dropdown-toggle" data-toggle="dropdown">Brand<span class="caret"></span></a>
                         <ul class="dropdown-menu">
-                            <li><a href="#">CFW</a></li>
-                            <li><a href="#">CFAW</a></li>
+                            <li><a href="@Url.Action("Index", "Items", null)">All</a></li>
+                            <li><a href="@Url.Action("Index", "Items", new { brand = "Audemars" } )">Audemars</a></li>
+                            <li><a href="@Url.Action("Index", "Items", new { brand = "Breitling" })">Breitling</a></li>
+                            <li><a href="@Url.Action("Index", "Items", new { brand = "Cartier" })">Cartier</a></li>
+                            <li><a href="@Url.Action("Index", "Items", new { brand = "Patek Philippe" })">Patek Philippe</a></li>
                         </ul>
-                    </li>*@
+                    </li>
                     @*<li class="dropdown">
                         <a class="dropdown-toggle" data-toggle="dropdown">Collections<span class="caret"></span></a>
                         <ul class="dropdown-menu">

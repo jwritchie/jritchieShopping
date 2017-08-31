@@ -224,7 +224,9 @@
     <Content Include="assets\Images\Carousel\patekphilippe_5905P_001.jpg" />
     <Content Include="assets\Images\Carousel\patekphilippe_7140R_5940J.jpg" />
     <Content Include="assets\Images\CFW-1300.jpg" />
-    <Content Include="assets\Images\DefaultImage.jpg" />
+    <Content Include="assets\Images\DefaultImage.jpg">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
     <Content Include="assets\Images\m2.jpg" />
     <Content Include="assets\Images\m3.jpg" />
     <Content Include="assets\Images\m5.jpg" />

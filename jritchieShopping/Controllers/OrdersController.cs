@@ -73,8 +73,6 @@ namespace jritchieShopping.Controllers
 
             var cartItems = db.CartItems.Where(c => c.CustomerId == userId).ToList();
 
-
-
             if (ModelState.IsValid)
             {
                 // Add Order to Orders table.
@@ -90,6 +88,7 @@ namespace jritchieShopping.Controllers
                     orderItem.Quantity = cartItem.Count;
                     orderItem.UnitPrice = cartItem.Item.Price;
 
+                    // Add orderItem, Delete cartItem.
                     db.OrderItems.Add(orderItem);
                     db.CartItems.Remove(cartItem);
                     db.SaveChanges();

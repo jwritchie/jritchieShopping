@@ -16,9 +16,30 @@ namespace jritchieShopping.Controllers
     {
 
         // GET: Items
-        public ActionResult Index()
+        public ActionResult Index(string brand)
         {
-            return View(db.Items.ToList());
+            if (brand == null)
+            {
+                return View(db.Items.ToList());
+            }
+
+            List<Item> searchList = new List<Item>();
+            foreach(Item item in db.Items)
+            {
+                if(item.Name.Contains(brand))
+                {
+                    searchList.Add(item);
+                }
+            }
+
+            if (searchList.Count > 0)
+            { 
+                return View(searchList);
+            }
+            else
+            {
+                return View(db.Items.ToList());
+            }
         }
 
         // GET: Items/Details/5
