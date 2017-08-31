@@ -1,7 +1,129 @@
 ﻿@{
     ViewBag.Title = "About";
 }
-<h2>@ViewBag.Title.</h2>
-<h3>@ViewBag.Message</h3>
 
-<p>Use this area to provide additional information.</p>
+
+
+
+<div class="subpageDisplay">
+
+    <div style="text-align:center; border-bottom:1px solid rgb(255,120,0); margin-bottom:20px">
+        <h3>About CF Watches</h3>
+    </div>
+
+
+    <!-- Subscribe section-->
+    <div class="row">
+        <div class="col-md-12" style="padding-left:50px; padding-right:50px">
+            <div id="subscribeSection">
+                <h1 style="color:rgb(255,120,0)">Subscribe</h1>
+                <p>To receive special offers and <span style="color:rgb(255,120,0)">VIP</span> treatment:</p>
+                <input id="subscribeEmail" placeholder="Enter e-mail" />
+                <br />
+                <button id="subscribeButton" class="btn" data-toggle="modal" data-target="#subscribeModal" margin-top:6px">Subscribe</button>
+            </div>
+        </div>
+    </div>
+
+    <!--store details-->
+    <div class="row" id="storeDetails">
+        <!--Contact section-->
+        <div class="col-md-4">
+            <div id="contact" class="text-center">
+                <div style="border:2px solid rgb(230,90,0); background-color:black">
+                    <h4>Contact</h4>
+                    <p>Send us your questions!</p>
+                    <p>
+                        <input placeholder="Name" />
+                    </p>
+                    <p>
+                        <input placeholder="Email" />
+                    </p>
+                    <p>
+                        <input placeholder="Subject" />
+                    </p>
+                    <p>
+                        <input placeholder="Message" />
+                    </p>
+                    <p>
+                        <button class="btn" id="sendButton">Send</button>
+                    </p>
+                </div>
+                <br />
+                <p>
+                    <button id="newsletterButton" class="btn" data-toggle="modal" data-target="#newsletterModal">Sign up for our Newsletter</button>
+                    @*<a href="#" data-toggle="modal" data-target="#newsletterModal">Newsletter</a>*@
+                </p>
+            </div>
+        </div>
+
+        <!-- About section-->
+        <div class="col-md-4">
+            <div id="about" class="text-center">
+                <h4>About</h4>
+                <p>
+                    <a href="#">About us</a>
+                </p>
+                <p>
+                    <a href="#">We're hiring</a>
+                </p>
+                <p>
+                    <a href="#">Support</a>
+                </p>
+                <p>
+                    <button id="findStoreButton" data-toggle="modal" data-target="#findStoreModal">Find store</button>
+                    <!--<button class="btn btn-primary" data-toggle="modal" data-target="#subscribeModal" style="background-color:red; margin-top:6px">Subscribe</button>-->
+                </p>
+                <p>
+                    <a href="#">Shipment</a>
+                </p>
+                <p>
+                    <a href="#">Payment</a>
+                </p>
+                <p>
+                    <a href="#">Gift card</a>
+                </p>
+                <p>
+                    <a href="#">Return</a>
+                </p>
+                <p>
+                    <a href="#">Help</a>
+                </p>
+            </div>
+        </div>
+
+        <!--Store subsection-->
+        <div class="col-md-4">
+            <div>
+                <h4>Store</h4>
+                <p><i class="fa fa-fw fa-map-marker"> </i>CF Watches</p>
+                <p><i class="fa fa-fw fa-phone"> </i>1-800-WATCHES</p>
+                <p><i class="fa fa-fw fa-envelope"> </i>showroom@cfwatches.com</p>
+                <br>
+                <!--We accept subsection-->
+                <h4>We accept</h4>
+                <p><i class="fa fa-fw fa-cc-amex"> </i> Amex</p>
+                <p><i class="fa fa-fw fa-credit-card"> </i> Credit Card</p>
+                <!--Social media icons subsection-->
+                <br>
+                <i class="fa fa-facebook-official"> </i>
+                <i class="fa fa-instagram"> </i>
+                <i class="fa fa-snapchat"> </i>
+                <i class="fa fa-pinterest-p"> </i>
+                <i class="fa fa-twitter"> </i>
+                <i class="fa fa-linkedin"> </i>
+            </div>
+        </div>
+    </div>
+
+
+
+
+
+
+</div>
+
+    @*<h2>@ViewBag.Title.</h2>
+    <h3>@ViewBag.Message</h3>
+
+    <p>Use this area to provide additional information.</p>*@

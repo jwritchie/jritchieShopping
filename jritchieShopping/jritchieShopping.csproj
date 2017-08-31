@@ -232,6 +232,16 @@
     <Content Include="assets\Images\m7.jpg" />
     <Content Include="assets\Images\m8.jpg" />
     <Content Include="assets\Images\m9.jpg" />
+    <Content Include="assets\Images\Uploads\Audemars Piguet Royal Oak Offshore.jpg" />
+    <Content Include="assets\Images\Uploads\Audemars Piguet Royal Oak Offshore26020.jpg" />
+    <Content Include="assets\Images\Uploads\Breitling Aerospace.jpg" />
+    <Content Include="assets\Images\Uploads\Breitling Avenger Seawolf.jpg" />
+    <Content Include="assets\Images\Uploads\Breitling Bentley 6.75.jpg" />
+    <Content Include="assets\Images\Uploads\Cartier Tank Americaine.jpg" />
+    <Content Include="assets\Images\Uploads\Patek Philippe Gondolo.jpg" />
+    <Content Include="assets\Images\Uploads\Patek Philippe Nautilus 4700-1.jpg" />
+    <Content Include="assets\Images\Uploads\Patek Philippe Nautilus.jpg" />
+    <Content Include="assets\Images\Uploads\Patek Philippe Twenty-4 4910.jpg" />
     <Content Include="Scripts\tinymce\jquery.tinymce.min.js" />
     <Content Include="Scripts\tinymce\license.txt" />
     <Content Include="Scripts\tinymce\plugins\advlist\plugin.js" />
@@ -481,7 +491,6 @@
   </ItemGroup>
   <ItemGroup>
     <Folder Include="App_Data\" />
-    <Folder Include="assets\Images\Uploads\" />
   </ItemGroup>
   <ItemGroup>
     <Content Include="fonts\glyphicons-halflings-regular.woff" />

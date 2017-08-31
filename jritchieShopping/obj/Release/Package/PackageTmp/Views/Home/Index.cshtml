@@ -3,11 +3,11 @@
 }
 
 
-<script src="~/assets/scripts/jquery-1.9.1.js"></script>
-<script src="~/assets/scripts/bootstrap.js"></script>
+@*<script src="~/assets/scripts/jquery-1.9.1.js"></script>
+<script src="~/assets/scripts/bootstrap.js"></script>*@
 
 
-<div class="container-fluid">
+<div class="container-fluid" style="margin-top:40px">
 
     <div id="homeCarousel" class="carousel slide">
 
@@ -38,7 +38,7 @@
         <a class="right carousel-control" href="#homeCarousel" data-slide="next"><span class="glyphicon glyphicon-chevron-right"></span></a>
     </div>
 
-    <div class="headerImageText" style="position:absolute; top:200px; left: 200px">
+    <div class="headerImageText" style="position:absolute; top:26%; left:26%; transform: translate(-26%, -26%)">
 
         @{ 
             var currentMonth = System.DateTime.Today.ToString("MMMM");
@@ -51,7 +51,7 @@
 
 </div>
 
-
+@section scripts{
 <script>
         $(document).ready(function () {
             $('.carousel').carousel({
@@ -81,4 +81,4 @@
             });
         });
 </script>
-
+    }

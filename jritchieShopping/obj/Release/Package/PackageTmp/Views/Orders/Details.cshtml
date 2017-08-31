@@ -4,87 +4,166 @@
     ViewBag.Title = "Details";
 }
 
-<h2>Details</h2>
 
-<div>
-    <h4>Order</h4>
-    <hr />
-    <dl class="dl-horizontal">
-        <dt>
-            @Html.DisplayNameFor(model => model.Address)
-        </dt>
+<div class="subpageDisplay">
 
-        <dd>
-            @Html.DisplayFor(model => model.Address)
-        </dd>
+    <div style="text-align:center; border-bottom:1px solid rgb(255,120,0); margin-bottom:20px">
+        <h3>Confirm the Order's Details</h3>
+        <h4>Submit your order</h4>
+    </div>
 
-        <dt>
-            @Html.DisplayNameFor(model => model.City)
-        </dt>
+    <br />
 
-        <dd>
-            @Html.DisplayFor(model => model.City)
-        </dd>
+    <div class="container-fluid">
 
-        <dt>
-            @Html.DisplayNameFor(model => model.State)
-        </dt>
+        <!-- Order Details -->
+        <div class="row">
+            <div class="col-md-6">
+                <dl class="dl-horizontal">
+                    <dt>Order #</dt>
+                    <dd>@Html.DisplayFor(model => model.Id)</dd>
 
-        <dd>
-            @Html.DisplayFor(model => model.State)
-        </dd>
+                    <dt>Date Ordered</dt>
+                    <dd>@Html.DisplayFor(model => model.OrderDate)</dd>
 
-        <dt>
-            @Html.DisplayNameFor(model => model.ZipCode)
-        </dt>
+                    <dt>@Html.DisplayNameFor(model => model.Total)</dt>
+                    <dd>$@Model.Total.ToString("N2")</dd>
+                </dl>
+            </div>
+        </div>
 
-        <dd>
-            @Html.DisplayFor(model => model.ZipCode)
-        </dd>
+        <!-- Section Divider -->
+        <div class="row">
+            <div class="col-md-offset-3" style="border:1px solid rgba(255,120,0,.5); width:50%; margin-top:20px; margin-bottom:40px">
+            </div>
+        </div>
 
-        <dt>
-            @Html.DisplayNameFor(model => model.Country)
-        </dt>
+        <div class="row">
 
-        <dd>
-            @Html.DisplayFor(model => model.Country)
-        </dd>
+            <!-- Delivery Information: -->
+            <div class="col-md-6">
+                <p style="text-indent:60px; font-weight:bold">Delivery Information:</p>
+                <dl class="dl-horizontal">
+                    <dt>Ship to:</dt>
+                    <dd>@Html.DisplayFor(model => model.Name)</dd>
+                    <dt></dt>
+                    <dd>@Html.DisplayFor(model => model.Address)</dd>
+                    <dt></dt>
+                    <dd>
+                        @Html.DisplayFor(model => model.City),
+                        @Html.DisplayFor(model => model.State)<span>&nbsp;</span>
+                        @Html.DisplayFor(model => model.ZipCode)<span>&nbsp;</span>
+                        @Html.DisplayFor(model => model.Country)
+                    </dd>
+                </dl>
+            </div>
 
-        <dt>
-            @Html.DisplayNameFor(model => model.Phone)
-        </dt>
+            <!-- Customer Information: -->
+            <div class="col-md-6">
+                <p style="text-indent:60px; font-weight:bold">Customer Information:</p>
+                <dl class="dl-horizontal">
+                    <dt>Customer ID</dt>
+                    <dd>@Html.DisplayFor(model => model.CustomerId)</dd>
 
-        <dd>
-            @Html.DisplayFor(model => model.Phone)
-        </dd>
+                    <dt>@Html.DisplayNameFor(model => model.Phone)</dt>
+                    <dd>@Html.DisplayFor(model => model.Phone)</dd>
 
-        <dt>
-            @Html.DisplayNameFor(model => model.Total)
-        </dt>
+                    <dt>@Html.DisplayNameFor(model => model.Email)</dt>
+                    <dd>@Html.DisplayFor(model => model.Email)</dd>
+                </dl>
+            </div>
 
-        <dd>
-            @Html.DisplayFor(model => model.Total)
-        </dd>
+        </div>
 
-        <dt>
-            @Html.DisplayNameFor(model => model.OrderDate)
-        </dt>
+        <!-- Section Divider -->
+        <div class="row">
+            <div class="col-md-offset-3" style="border:1px solid rgba(255,120,0,.5); width:50%; margin-top:20px; margin-bottom:40px">
+            </div>
+        </div>
 
-        <dd>
-            @Html.DisplayFor(model => model.OrderDate)
-        </dd>
+        <!-- Items Ordered Header -->
+        <div class="row">
+            <div class="col-md-12 text-center">
+                <p style="font-weight:bold">Items Ordered:</p>
+            </div>
+        </div>
 
-        <dt>
-            @Html.DisplayNameFor(model => model.CustomerId)
-        </dt>
+        <!-- Items Ordered table -->
+        <table class="table" style="width:70%; margin: 0px auto">
+            <tr>
+                <th style="width:5%">
+                    Item
+                </th>
+                <th style="width:40%">
+                </th>
+                <th style="text-align:right; width:15%">
+                    Quantity
+                </th>
+                <th style="text-align:right; width:20%">
+                    Unit Price
+                </th>
+                <th style="text-align:right; width:20%">
+                    Subtotal
+                </th>
+            </tr>
 
-        <dd>
-            @Html.DisplayFor(model => model.CustomerId)
-        </dd>
+            @{
+                foreach (var item in Model.OrderItems)
+                {
+                    <tr>
+                        <td>
+                            <img src="@item.Item.MediaURL" style="height:50px; width:auto" />
+                        </td>
+                        <td>
+                            @Html.DisplayFor(modelItem => item.Item.Name)
+                        </td>
+                        <td style="text-align:right">
+                            @Html.DisplayFor(modelItem => item.Quantity)
+                        </td>
+                        <td style="text-align:right">
+                            $
+                            @item.UnitPrice.ToString("N2")
+                        </td>
+                        <td style="text-align:right">
+                            $@item.Subtotal.ToString("N2")
+                        </td>
+                    </tr>
+                }
+            }
 
-    </dl>
+            <tr>
+                <td></td>
+                <td></td>
+                <td></td>
+                <td style="text-align:right; font-weight:bold">
+                    Total
+                </td>
+                <td style="text-align:right">
+                    $
+                    @Model.Total.ToString("N2")
+                </td>
+                <td></td>
+            </tr>
+
+        </table>
+
+        <div class="row">
+            <div class="col-md-12 text-center" style="margin-top:10px; padding:20px 0px 20px 0px; border-top: 1px solid rgb(255,120,0)">
+                @using (Html.BeginForm())
+                {
+                    @Html.AntiForgeryToken()
+
+                    <div class="form-actions no-color">
+                        <a class="btn btn-default" href="@Url.Action("Submit", "Orders", new { id = @Model.Id })" style="background-color:rgb(255,120,0)">Submit Order</a>
+                        @*<input type="submit" value="Check out" class="btn btn-default" style="background-color:rgb(255,120,0)"/>*@
+                        @*@Html.ActionLink("Check out", "Create", "Orders", null, new { style = "color:rgb(255,120,0); text-decoration:underline" })*@
+                        <span>|</span>
+                        <a class="btn btn-default" href="@Url.Action("Delete", "Orders", new { id = Model.Id})">Cancel Order</a>
+                        @*@Html.ActionLink("Cancel order", "Index", "Items", null, new { style = "color:rgb(255,120,0); text-decoration:underline" })*@
+                    </div>
+                }
+            </div>
+        </div>
+    </div>
 </div>
-<p>
-    @Html.ActionLink("Edit", "Edit", new { id = Model.Id }) |
-    @Html.ActionLink("Back to List", "Index")
-</p>
+
