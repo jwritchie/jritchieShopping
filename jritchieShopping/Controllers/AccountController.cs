@@ -165,7 +165,7 @@ namespace jritchieShopping.Controllers
                     // var callbackUrl = Url.Action("ConfirmEmail", "Account", new { userId = user.Id, code = code }, protocol: Request.Url.Scheme);
                     // await UserManager.SendEmailAsync(user.Id, "Confirm your account", "Please confirm your account by clicking <a href=\"" + callbackUrl + "\">here</a>");
 
-                    return RedirectToLocal(returnUrl);                  // Return user to page displayed before log-in page was displayed.
+                    return RedirectToLocal(returnUrl);                  // Return user to view displayed before log-in view was displayed.
                     //return RedirectToAction("Index", "Home");
                 }
                 AddErrors(result);

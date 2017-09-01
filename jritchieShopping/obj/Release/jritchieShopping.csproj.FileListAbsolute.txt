@@ -95,3 +95,4 @@ C:\Users\J\Documents\Visual Studio 2017\Projects\jritchieShopping\jritchieShoppi
 C:\Users\J\Documents\Visual Studio 2017\Projects\jritchieShopping\jritchieShopping\obj\Release\jritchieShopping.csproj.CoreCompileInputs.cache
 C:\Users\J\Documents\Visual Studio 2017\Projects\jritchieShopping\jritchieShopping\obj\Release\jritchieShopping.dll
 C:\Users\J\Documents\Visual Studio 2017\Projects\jritchieShopping\jritchieShopping\obj\Release\jritchieShopping.pdb
+C:\Users\J\Documents\Visual Studio 2017\Projects\jritchieShopping\jritchieShopping\bin\assets\Images\DefaultImage.jpg

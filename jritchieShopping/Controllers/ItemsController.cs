@@ -16,9 +16,9 @@ namespace jritchieShopping.Controllers
     {
 
         // GET: Items
-        public ActionResult Index(string brand)
+        public ActionResult Index(string searchTerm)
         {
-            if (brand == null)
+            if (searchTerm == null)
             {
                 return View(db.Items.ToList());
             }
@@ -26,7 +26,7 @@ namespace jritchieShopping.Controllers
             List<Item> searchList = new List<Item>();
             foreach(Item item in db.Items)
             {
-                if(item.Name.Contains(brand))
+                if(item.Name.Contains(searchTerm) || item.Description.Contains(searchTerm))
                 {
                     searchList.Add(item);
                 }

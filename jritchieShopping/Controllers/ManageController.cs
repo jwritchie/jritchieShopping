@@ -7,6 +7,8 @@ using Microsoft.AspNet.Identity;
 using Microsoft.AspNet.Identity.Owin;
 using Microsoft.Owin.Security;
 using jritchieShopping.Models;
+using System.Net;
+using jritchieShopping.Models.CodeFirst;
 
 namespace jritchieShopping.Controllers
 {

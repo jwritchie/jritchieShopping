@@ -44,7 +44,9 @@ namespace jritchieShopping.Models
                     ViewBag.CartTotal = 0;
                 }
 
-                
+
+                ViewBag.UserOrders = db.Orders.AsNoTracking().Where(c => c.CustomerId == user.Id).ToList();
+
 
 
                 /***  Below code is from Ryan's project ***/
