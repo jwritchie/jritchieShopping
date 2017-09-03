@@ -14,6 +14,14 @@
     </div>
 
 
+    @if (!ViewBag.Search)
+    {
+        <div class="alert alert-danger fade in alert-dismissable">
+            <a href="#" class="close" data-dismiss="alert" aria-label="close">&times;</a>
+            <span style="font-weight:bold">Unsuccessful search</span> for term "<span style="font-style:italic">@ViewBag.SearchTerm</span>".
+            <p>Note: searches are case-sensitive.</p>
+        </div>
+    }
 
     @if (User.IsInRole("Admin"))
     {

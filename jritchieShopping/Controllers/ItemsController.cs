@@ -20,6 +20,8 @@ namespace jritchieShopping.Controllers
         {
             if (searchTerm == null)
             {
+                ViewBag.SearchTerm = "";
+                ViewBag.Search = true;
                 return View(db.Items.ToList());
             }
 
@@ -33,11 +35,15 @@ namespace jritchieShopping.Controllers
             }
 
             if (searchList.Count > 0)
-            { 
+            {
+                ViewBag.SearchTerm = "";
+                ViewBag.Search = true;
                 return View(searchList);
             }
             else
             {
+                ViewBag.SearchTerm = searchTerm;
+                ViewBag.Search = false;
                 return View(db.Items.ToList());
             }
         }

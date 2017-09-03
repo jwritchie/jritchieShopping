@@ -48,6 +48,11 @@ namespace jritchieShopping.Models
                 ViewBag.UserOrders = db.Orders.AsNoTracking().Where(c => c.CustomerId == user.Id).ToList();
 
 
+                // Use to control display of Item search success/failure.
+                ViewBag.SearchTerm = "";
+                ViewBag.Search = true;
+
+
 
                 /***  Below code is from Ryan's project ***/
                 //ViewBag.ItemTypes = db.ItemTypes.AsNoTracking().OrderBy(t => t.TypeName).ToList();
